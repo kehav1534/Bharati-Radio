@@ -39,8 +39,8 @@ body{
     align-items: center;
     text-shadow: 0em 0.1em 0.1em rgba(0, 0, 0, 0.4);
 }
-.option:hover{
-    border: 0.5px solid red;
+a:hover{
+    color: brown;
 }
 
 #m-btn{
@@ -51,6 +51,7 @@ body{
 
 .area-head-options{
     display: flex;
+    /* flex-direction: row; */
     justify-content: center;
     align-items: center;
     justify-self: center;
@@ -70,6 +71,8 @@ body{
 }
 #sidebar-element{
     padding: 10px;
+}
+a{
     background-color: white;
     text-decoration: none;
     color: red;
@@ -97,8 +100,8 @@ body{
 .footer-block {
     background-color: brown;
     display: grid;
-    justify-content: center; 
-    align-items: center;
+    justify-content: center; /* Pushes items to the ends */
+    align-items: center; /* Aligns items vertically in the center */
     padding: 5px 20px;
     margin: 0;
     margin-top: 10px
@@ -161,23 +164,31 @@ body{
     }
 }
 
+
+
+
+
 .area-body {
 
-    padding: 10px 20px;   
-    margin: 20px auto;     
-    width: 90%;                    
-    line-height: 1.6;   
-    text-align: justify;
-    box-sizing: border-box;  
-    justify-content: center;
+  padding: 10px 20px;   
+  margin: 20px auto;     
+  width: 90%;                    
+  line-height: 1.6;   
+  text-align: justify;
+  box-sizing: border-box;  
+  justify-content: center;
+
+    margin: 0;
+    font-family: Arial, sans-serif;
     color: white;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
+
     min-height: 100vh;
     background-position: center;
-    background-image:url('background.jpg');
+    background-image:url('resources/background.jpg');
     margin:0;
     width: auto;
     height:110vh;
