@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Document</title>
+    <link href="../main.css" rel="stylesheet">
+
+    <script>
+        function openMenu(){
+            document.querySelector(".sidebar").style.display = "grid";
+        }
+        function closeMenu(){
+            document.querySelector(".sidebar").style.display = "none";
+        }
+        window.onresize = function() {
+            if (window.innerWidth>=1076){
+            document.querySelector(".sidebar").style.display = "none";
+        }
+        };
+    </script>
+
+</head>
+<body>
+  
+    <!-- Header -->
+    <div class="area">
+        <!-- Header -->
+        <div class="area-head">
+            <div class="area-head-col">
+                <img src="../bharti_radio_logo.jpg" alt="Radio Bharati Logo" id="brand-img">
+
+            </div>
+            <div class="area-head-col">
+                <div class="area-head-options">
+                    <div class="option">HOME</div>
+                    <div class="option">ABOUT US</div>
+                    <div class="option">BULLETIN</div>
+                    <div class="option">SHOWS</div>
+                    <div class="option">VIDEOS</div>
+                    <div class="option">PODCAST</div>
+                    <div class="option">SPECIAL PROGRAMS</div>
+                    <div class="option">CONTACT US</div>
+                    <div class="option">SUGGESTION</div>
+                    <div class="option">LOGIN</div>
+                    <div class="menu-btn">
+                        <button id="m-btn" onclick="openMenu()">
+                            <img width="64" height="64" src="https://img.icons8.com/sf-black/64/FA5252/menu.png" alt="menu"/>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="area-body">
+
+
+            <div class="form-container">
+        <header class="form-header">
+            <h1>Suggestion Form</h1>
+        </header>
+
+        <form class="suggestion-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email Address">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="tel" name="contact" placeholder="Contact Number">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="location" placeholder="Location">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="subject" placeholder="Subject">
+            </div>
+
+            <div class="form-group">
+                <textarea name="suggestion" rows="5" placeholder="suggestion for shows"></textarea>
+            </div>
+
+            <div class="form-footer">
+                <div class="captcha">
+                    <span>12 + 2 =</span>
+                    <input type="text" class="captcha-input">
+                </div>
+                <button type="submit" class="submit-btn">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+   
+        </div>
+
+        <!-- Footer -->
+        <div class="area-footer">
+            <div class="footer-block">
+                <h2>A-4, Paschim Vihar, Opp. Paschim Vihar (East) Metro Station, Rohtak Road, New Delhi, Delhi 110063</h2>
+            </div>
+            <div class="footer-block">
+                <h2>A-4, Paschim Vihar, Opp. Paschim Vihar (East) Metro Station, Rohtak Road, New Delhi, Delhi 110063</h2>
+            </div>
+
+
+        </div>
+
+        <!-- <div class="footer-block">
+                <div class="area-footer-col">
+                    <div class="footer-col-item">content1</div>
+                    <div class="footer-col-item">content2</div>
+                    <div class="footer-col-item">content3</div>
+                </div>
+                
+            </div> -->
+    </div>
+</body>
+</html>
