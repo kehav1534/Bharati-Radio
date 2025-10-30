@@ -51,7 +51,6 @@ body{
 
 .area-head-options{
     display: flex;
-    /* flex-direction: row; */
     justify-content: center;
     align-items: center;
     justify-self: center;
@@ -98,8 +97,8 @@ body{
 .footer-block {
     background-color: brown;
     display: grid;
-    justify-content: center; /* Pushes items to the ends */
-    align-items: center; /* Aligns items vertically in the center */
+    justify-content: center; 
+    align-items: center;
     padding: 5px 20px;
     margin: 0;
     margin-top: 10px
@@ -164,22 +163,18 @@ body{
 
 .area-body {
 
-  padding: 10px 20px;   
-  margin: 20px auto;     
-  width: 90%;                    
-  line-height: 1.6;   
-  text-align: justify;
-  box-sizing: border-box;  
-  justify-content: center;
-
-    margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 10px 20px;   
+    margin: 20px auto;     
+    width: 90%;                    
+    line-height: 1.6;   
+    text-align: justify;
+    box-sizing: border-box;  
+    justify-content: center;
     color: white;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
-
     min-height: 100vh;
     background-position: center;
     background-image:url('background.jpg');
