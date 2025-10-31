@@ -80,9 +80,9 @@ body {
 }
 
 a {
-    background-color: var(--bg-light);
     text-decoration: none;
     color: red;
+    transition: 0.5s;
 }
 
 a:hover {
@@ -93,7 +93,7 @@ a:hover {
 /* Sidebar Navigation */
 .sidebar {
     display: none;
-    z-index: 1;
+    z-index: 5;
     right: 0;
     top: 0;
     position: fixed;
@@ -101,6 +101,8 @@ a:hover {
 
 #sidebar-element {
     padding: 10px;
+    background-color: var(--bg-light);
+
 }
 
 #sidebar-element:hover {
@@ -167,8 +169,7 @@ a:hover {
     align-self: start;
 }
 
-.form-header,
-.header {
+.form-header {
     position: relative;
     background-color: var(--primary-color);
     border-radius: var(--border-radius-lg);
@@ -177,8 +178,7 @@ a:hover {
     margin-bottom: var(--spacing-lg);
 }
 
-.form-header::after,
-.header::after {
+.form-header::after {
     content: '';
     position: absolute;
     z-index: -1;
@@ -191,14 +191,15 @@ a:hover {
     transform: translateY(6px);
 }
 
-.form-header h1,
-.header h1 {
+.form-header h1 {
     margin: 0;
     text-align: center;
     color: var(--text-light);
-    font-family: Georgia, serif;
-    font-size: 24px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+h1{
+    font-size: 24px;
 }
 
 .suggestion-form {
