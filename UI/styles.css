@@ -3,7 +3,7 @@
     --primary-color: rgb(154, 42, 42);
     --primary-dark: rgb(112, 30, 30);
     --text-light: white;
-    --text-dark: #333;
+    --text-dark: #151515;
     --bg-light: #fff;
     --accent-red: orangered;
     --border-radius-sm: 4px;
@@ -31,6 +31,8 @@ body {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    justify-content:center;
+    align-items: center;
 }
 
 /* Layout Components */
@@ -178,7 +180,7 @@ a:hover {
     margin-bottom: var(--spacing-lg);
 }
 
-.form-header::after {
+/* .form-header::after {
     content: '';
     position: absolute;
     z-index: -1;
@@ -188,6 +190,18 @@ a:hover {
     height: 100%;
     border-radius: var(--border-radius-lg);
     background-color: var(--primary-dark);
+    transform: translateY(6px);
+} */
+.form-header::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background-color: rgb(112,30,30);
     transform: translateY(6px);
 }
 
@@ -244,6 +258,17 @@ textarea {
     max-width: 1200px;
 } */
 
+.video-section-container {
+    background-color: rgb(252, 250, 250);
+    /* border: 1px solid rgb(255, 255, 255); */
+    border-radius: 10px;
+    justify-content: center;
+    justify-self:center;
+    padding: 10px;
+    width:100%;
+    margin:0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -291,9 +316,9 @@ iframe {
 .load-more-btn,
 .submit-btn {
     padding: 10px 25px;
-    border: none;
+    border: 2px solid black;
     border-radius: var(--border-radius-sm);
-    background-color: var(--bg-light);
+    background-color: var(--primary-color);
     color: var(--text-dark);
     font-size: 16px;
     font-weight: bold;
@@ -333,11 +358,96 @@ iframe {
     justify-content: center;
 }
 
+/* ----------login input section------ */
+.input-group input {
+    margin-bottom: 20px;
+    width: 100%;
+    min-width: 300px;
+    padding: 12px 15px;
+    border: none;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: grey;
+    box-sizing: border-box;
+}
+
+.input-group{
+    display: flex;
+    
+}
+.input-group i{
+    color: white;
+    margin: 0 10px;
+    font-size: 16px;
+    align-self: center;
+}
+/* ---------login button style-------- */
+.btn-field button {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+    color: black;
+}
+
 /* Brand Logo */
 #brand-img {
     width: 120px;
     height: 100px;
 
+}
+
+
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.captcha {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.captcha-input {
+    width: 50px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+.submit-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: rgb(214, 214, 214); 
 }
 
 /* Responsive Design */
