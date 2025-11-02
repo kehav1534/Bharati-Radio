@@ -216,6 +216,10 @@ h1{
     font-size: 24px;
 }
 
+h2{
+    font-size :20px;
+}
+
 .suggestion-form {
     padding: 2rem;
     background-color: var(--primary-color);
@@ -448,6 +452,26 @@ button:hover {
 
 .submit-btn:hover {
     background-color: rgb(214, 214, 214); 
+}
+
+.show-section {
+    margin-bottom: 3rem; /* mb-12 */
+}
+
+.section-content {
+    background-color: var(--white);
+    padding: 1.5rem; /* p-6 */
+    border-bottom-left-radius: 0.5rem; /* rounded-b-lg */
+    border-bottom-right-radius: 0.5rem;
+    box-shadow: var(--shadow-xl);
+}
+
+.section-content {
+    background-color: var(--white);
+    padding: 1.5rem; /* p-6 */
+    border-bottom-left-radius: 0.5rem; /* rounded-b-lg */
+    border-bottom-right-radius: 0.5rem;
+    box-shadow: var(--shadow-xl);
 }
 
 /* Responsive Design */
