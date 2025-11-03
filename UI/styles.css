@@ -126,6 +126,7 @@ a:hover {
     background-repeat: no-repeat;
     margin: 0;
     background-image:url('resources/background.jpg');
+    color: black;
     ;
 }
 
