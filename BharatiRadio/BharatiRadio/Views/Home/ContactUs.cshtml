@@ -1,0 +1,47 @@
+﻿@model BharatiRadio.Models.Employee
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ContactUs</title>
+</head>
+<body>
+    <div>
+        This is Contact-Us Page.
+        @Model.Name
+        <br />
+        @Model.Id
+        <br />
+        @Model.Address
+        <br />
+        @DateTime.Now
+        <br />
+        @(5-3)
+
+        ``````````````
+        @{
+            var a = 1;
+            var b = 6;
+            var c = a + b;
+        }
+        <br />
+        @c
+        <br />
+        @{ 
+            var mylist = new List<string>()
+            {
+                "Banana",
+                "Lechie",
+                "Guvava"
+            };
+        }
+        @foreach(var frt in mylist)
+            {
+                <h1>This fruit is @frt</h1>
+            }
+
+
+    </div>
+</body>
+</html>

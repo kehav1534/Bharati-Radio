@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AboutUs</title>
+</head>
+<body>
+    <div>
+        This is About-Us page.
+        @helper MyListHelper(string[] args)
+        { 
+        <ul>
+            @foreach(var item in args)
+    {
+        <li>
+            @item
+        </li>
+    }
+        </ul>
+    }
+        <label>About Us Secction</label>
+        <div>
+            @MyListHelper(new string[] {"Keshav", "Ayush", "Khushagra"})
+        </div>
+        <br>
+        <label>Another Helper section</label>
+        @MyListHelper(new string[] {"Python", "Java", "C#", "HTML"})
+    </div>
+</body>
+</html>

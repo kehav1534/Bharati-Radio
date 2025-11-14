@@ -1,0 +1,12 @@
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\bin\Debug\MVCApp.Db.dll
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\bin\Debug\MVCApp.Db.pdb
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\obj\Debug\MVCApp.Db.csproj.AssemblyReference.cache
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\obj\Debug\MVCApp.Db.csproj.CoreCompileInputs.cache
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\obj\Debug\MVCApp.Db.dll
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\obj\Debug\MVCApp.Db.pdb
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\bin\Debug\MVCApp.Db.dll.config
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\bin\Debug\EntityFramework.dll
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\bin\Debug\EntityFramework.xml
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\obj\Debug\MVCApp.Db.csproj.Up2Date

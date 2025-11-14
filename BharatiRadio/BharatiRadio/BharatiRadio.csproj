@@ -105,18 +105,22 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
-    <Content Include="Views\Shared\Home.cshtml" />
-    <Content Include="Views\Shared\Programs.cshtml" />
-    <Content Include="Views\Shared\ContactUs.cshtml" />
-    <Content Include="Views\Shared\AboutUs.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Home\Programs.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
+    <Content Include="Views\Home\AboutUs.cshtml" />
     <Content Include="Views\Feedback\feedback.cshtml" />
     <Content Include="Views\Auth\Login.cshtml" />
     <Content Include="Views\Shows\Show.cshtml" />
+    <Content Include="Views\Shows\AddShows.cshtml" />
+    <Content Include="Views\Shared\Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -126,7 +130,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MVCApp.Db\MVCApp.Db.csproj">
+      <Project>{35f6bd04-a2fe-4cbd-b6b1-f9bdee0aadab}</Project>
+      <Name>MVCApp.Db</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
