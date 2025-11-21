@@ -70,3 +70,11 @@ C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiR
 C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio\obj\Debug\BharatiR.7E4D880E.Up2Date
 C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio\obj\Debug\BharatiRadio.dll
 C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio\obj\Debug\BharatiRadio.pdb
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio\bin\EntityFramework.dll
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio\bin\EntityFramework.xml
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio\bin\EntityFramework.SqlServer.dll
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio\bin\EntityFramework.SqlServer.xml
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml

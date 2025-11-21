@@ -10,3 +10,5 @@ C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiR
 C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\bin\Debug\EntityFramework.xml
 C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\obj\Debug\MVCApp.Db.csproj.Up2Date
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\bin\Debug\BharatiRadio.Models.dll
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\MVCApp.Db\bin\Debug\BharatiRadio.Models.pdb

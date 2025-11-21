@@ -15,6 +15,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +58,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,12 +68,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auth.cs">
+      <DependentUpon>BharatiRadio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BharatiRadio.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BharatiRadio.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BharatiRadio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BharatiRadio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BharatiRadio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BharatiRadio.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Bulletin.cs">
+      <DependentUpon>BharatiRadio.tt</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="DbOperations\SuggestionRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Suggestion.cs">
+      <DependentUpon>BharatiRadio.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="BharatiRadio.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BharatiRadio.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BharatiRadio.edmx.diagram">
+      <DependentUpon>BharatiRadio.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BharatiRadio.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BharatiRadio.edmx</DependentUpon>
+      <LastGenOutput>BharatiRadio.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BharatiRadio.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BharatiRadio.edmx</DependentUpon>
+      <LastGenOutput>BharatiRadio.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BharatiRadio.Models\BharatiRadio.Models.csproj">
+      <Project>{789a569d-05b2-4521-843d-346c004ece64}</Project>
+      <Name>BharatiRadio.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

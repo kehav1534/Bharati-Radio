@@ -24,17 +24,7 @@ namespace BharatiRadio.Controllers
         }
         public ActionResult ContactUs()
         {
-            var data = GetEmployee();
-            return View(data);
-        }
-        private Employee GetEmployee()
-        {
-            return new Employee()
-            {
-                Id = 1,
-                Name = "Keshav",
-                Address = "India"
-            };
+            return View();
         }
         private List<Program> GetPrograms()
         {
