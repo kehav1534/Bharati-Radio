@@ -111,6 +111,27 @@ a:hover {
     background-color: ghostwhite;
 }
 
+/* --------about page css---------- */
+.about-section{
+    display: flex;
+    flex-direction: row;  
+}
+.about-video{
+    margin-right: 15px;
+}
+
+/*----------about page css ends---------- */
+/* ---------contact us-------------------*/
+.visit-section{
+    margin-top: 40px;
+}
+
+.glass{
+    display: flex;
+    gap: 15px;
+}
+/* ---------contact us css ends-------------------*/
+
 /* Main Content Area */
 .area-body {
     align-items: center;
@@ -340,7 +361,7 @@ iframe {
 .login-container {
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(154, 42, 42, 1);
     padding: 80px 60px;
     width: 80%;
     gap: 50px;
@@ -370,7 +391,7 @@ iframe {
     min-width: 300px;
     padding: 12px 15px;
     border: none;
-    background-color: #e8e8e8;
+    background-color: #fffefe;
     border-radius: 5px;
     font-size: 1rem;
     color: grey;

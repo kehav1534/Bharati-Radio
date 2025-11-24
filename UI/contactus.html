@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,13 +27,13 @@
   <div class="sidebar">
         <button id="m-btn" onclick="closeMenu()">&times; Close</button>
         <a href="home.html" id="sidebar-element">HOME</a>
-        <a href="#" id="sidebar-element">ABOUT US</a>
+        <a href="aboutus.html" id="sidebar-element">ABOUT US</a>
         <a href="#" id="sidebar-element">BULLETIN</a>
         <a href="shows.html" id="sidebar-element">SHOWS</a>
-        <a href="#" id="sidebar-element">VIDEOS</a>
+        <a href="videos.html" id="sidebar-element">VIDEOS</a>
         <a href="#" id="sidebar-element">PODCAST</a>
         <a href="SpecailProgram_rb.html" id="sidebar-element">SPECIAL PROGRAMS</a>
-        <a href="#" id="sidebar-element">CONTACT US</a>
+        <a href="contactus.html" id="sidebar-element">CONTACT US</a>
         <a href="feedback.html" id="sidebar-element">SUGGESTION</a>
         <a href="login.html" id="sidebar-element">LOGIN</a>
     </div>
@@ -48,13 +48,13 @@
             <div class="area-head-col">
                 <div class="area-head-options">
                     <a href = "home.html" class="option">HOME</a>
-                    <a href = "" class="option">ABOUT US</a>
+                    <a href = "aboutus.html" class="option">ABOUT US</a>
                     <a href = "" class="option">BULLETIN</a>
                     <a href = "shows.html" class="option">SHOWS</a>
-                    <a href = "" class="option">VIDEOS</a>
+                    <a href = "videos.html" class="option">VIDEOS</a>
                     <a href = "" class="option">PODCAST</a>
                     <a href = "SpecailProgram_rb.html" class="option">SPECIAL PROGRAMS</a>
-                    <a href = "" class="option">CONTACT US</a>
+                    <a href = "contactus.html" class="option">CONTACT US</a>
                     <a href = "feedback.html" class="option">SUGGESTION</a>
                     <a href = "login.html" class="option">LOGIN</a>
                     <div class="menu-btn">
@@ -66,45 +66,67 @@
             </div>
         </div>
         <div class="area-body">
-        
-        <!-- The main login container from your CSS -->
-        <div class="login-container">
-            
-            <!-- The left "Welcome" panel -->
-            <div class="welcome-section">
-                <h1>Welcome Back!</h1>
-                <p>Explore our platform to discover new features, connect with others, and make the most out of your experience. Ready to continue your journey? Feel free to navigate through our site.</p>
-            </div>
-            
-            <div class="form-section">
-
-                <form action="#" method="POST">
-                    <div class="input-group">
-                        <i class="fas fa-user"></i> 
-                        <input type="text" placeholder="Username" required>
-                    </div>
-                    
-                    <!-- Password Input Group -->
-                    <div class="input-group">
-                        <i class="fas fa-lock"></i> 
-                        <input type="password" placeholder="Password" required>
-                    </div>
-                    
-                    <!-- Login Button -->
-                    <div class="btn-field">
-                        <button type="submit">Login</button>
+            <div class="form-container">
+                <header class="form-header">
+                    <h1>Contact Us</h1>
+                </header>
+                <form class="suggestion-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email Address">
+                        </div>
                     </div>
 
-                    <div class="login-links">
-                        <a href="#">Forgot Password?</a>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" name="contact" placeholder="Contact Number">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="location" placeholder="Location">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject">
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="suggestion" rows="5" placeholder="suggestion for shows"></textarea>
+                    </div>
+
+                    <div class="form-footer">
+                        <div class="captcha">
+                            <span>12 + 2 =</span>
+                            <input type="text" class="captcha-input">
+                        </div>
+                        <button type="submit" class="submit-btn">SUBMIT</button>
                     </div>
                 </form>
-            </div>
-
+                <section class="visit-section" >
+                    <header class="form-header">
+                        <h1>Visit us</h1>
+                    </header>
+                    <div class="visit-card glass">
+                        <div class="visit-map">
+                            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=77.1000,28.6542,77.1250,28.6750&layer=mapnik" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="visit-info">
+                            <div class="visit-title">Address :</div>
+                            <div>
+                                Bharat Vidyapeeth's Institute of Computer Applications and Management (BVICAM)<br>
+                                A-4, Paschim Vihar, Rohtak Road, New Delhi – 110063 (INDIA)<br>
+                                <strong>Tel:</strong> +91-11-25275055<br>
+                                <strong>Fax:</strong> +91-11-25255056<br>
+                                <strong>Mobile:</strong> +91-9212022066<br>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div> 
         </div>
-
-    </div>
-
         <!-- Footer -->
         <div class="area-footer">
             <div class="footer-block">
