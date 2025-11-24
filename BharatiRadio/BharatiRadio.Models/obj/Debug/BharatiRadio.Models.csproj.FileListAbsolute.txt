@@ -1,0 +1,6 @@
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio.Models\bin\Debug\BharatiRadio.Models.dll
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio.Models\bin\Debug\BharatiRadio.Models.pdb
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio.Models\obj\Debug\BharatiRadio.Models.csproj.AssemblyReference.cache
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio.Models\obj\Debug\BharatiRadio.Models.csproj.CoreCompileInputs.cache
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio.Models\obj\Debug\BharatiRadio.Models.dll
+C:\Users\Keshav Maheshwari\OneDrive\Desktop\Bharati-Radio\Bharati-Radio\BharatiRadio\BharatiRadio.Models\obj\Debug\BharatiRadio.Models.pdb

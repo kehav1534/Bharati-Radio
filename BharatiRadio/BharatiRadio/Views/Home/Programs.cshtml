@@ -1,0 +1,39 @@
+﻿@model List<BharatiRadio.Models.Program>
+
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+<div class="area-body">
+    <div class="form-container">
+        <header class="form-header">
+            <h1>Special Programs</h1>
+        </header>
+
+        <div class="video-section-container">
+
+            <div class="grid-container">
+                @foreach (var videos in Model)
+                {
+                    <div class="video-item">
+                        <div class="video-embed">
+                            <iframe src=@videos.link
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" style="border-radius: 10px;"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p>@videos.title</p>
+                    </div>
+                }
+            </div>
+            <div class="button-container">
+                <button class="load-more-btn">Load More</button>
+
+            </div>
+        </div>
+    </div>
+
+</div>
