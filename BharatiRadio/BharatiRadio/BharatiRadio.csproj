@@ -120,12 +120,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
     <Compile Include="Models\Bulletin.cs" />
     <Compile Include="Models\BulletinContext.cs" />
     <Compile Include="Models\Feedback.cs" />
     <Compile Include="Models\FeedbackContext.cs" />
     <Compile Include="Models\Program.cs" />
+    <Compile Include="Models\RadioContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

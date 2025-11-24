@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{88400E0B-7DAD-43E4-85B4-CCAB45E5F354}|BharatiRadio\\BharatiRadio.csproj|solutionrelative:bharatiradio\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88400E0B-7DAD-43E4-85B4-CCAB45E5F354}|BharatiRadio\\BharatiRadio.csproj|C:\\Users\\Keshav Maheshwari\\OneDrive\\Desktop\\Bharati-Radio\\Bharati-Radio\\BharatiRadio\\bharatiradio\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88400E0B-7DAD-43E4-85B4-CCAB45E5F354}|BharatiRadio\\BharatiRadio.csproj|solutionrelative:bharatiradio\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{88400E0B-7DAD-43E4-85B4-CCAB45E5F354}|BharatiRadio\\BharatiRadio.csproj|C:\\Users\\Keshav Maheshwari\\OneDrive\\Desktop\\Bharati-Radio\\Bharati-Radio\\BharatiRadio\\bharatiradio\\content\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{88400E0B-7DAD-43E4-85B4-CCAB45E5F354}|BharatiRadio\\BharatiRadio.csproj|solutionrelative:bharatiradio\\content\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88400E0B-7DAD-43E4-85B4-CCAB45E5F354}|BharatiRadio\\BharatiRadio.csproj|C:\\Users\\Keshav Maheshwari\\OneDrive\\Desktop\\Bharati-Radio\\Bharati-Radio\\BharatiRadio\\bharatiradio\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88400E0B-7DAD-43E4-85B4-CCAB45E5F354}|BharatiRadio\\BharatiRadio.csproj|solutionrelative:bharatiradio\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88400E0B-7DAD-43E4-85B4-CCAB45E5F354}|BharatiRadio\\BharatiRadio.csproj|C:\\Users\\Keshav Maheshwari\\OneDrive\\Desktop\\Bharati-Radio\\Bharati-Radio\\BharatiRadio\\bharatiradio\\models\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -164,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\Keshav Maheshwari\\OneDrive\\Desktop\\Bharati-Radio\\Bharati-Radio\\BharatiRadio\\BharatiRadio\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "BharatiRadio\\Controllers\\AdminController.cs",
@@ -183,7 +183,7 @@
               "RelativeDocumentMoniker": "BharatiRadio\\Views\\Admin\\Index.cshtml",
               "ToolTip": "C:\\Users\\Keshav Maheshwari\\OneDrive\\Desktop\\Bharati-Radio\\Bharati-Radio\\BharatiRadio\\BharatiRadio\\Views\\Admin\\Index.cshtml",
               "RelativeToolTip": "BharatiRadio\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAAOwBAAAAAAAAAAAAAPABAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAOgBAAAAAAAAAAAAAPUBAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-20T11:54:13.347Z",
               "EditorCaption": ""
@@ -255,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "dashboard.css",
               "DocumentMoniker": "C:\\Users\\Keshav Maheshwari\\OneDrive\\Desktop\\Bharati-Radio\\Bharati-Radio\\BharatiRadio\\BharatiRadio\\Content\\dashboard.css",
               "RelativeDocumentMoniker": "BharatiRadio\\Content\\dashboard.css",
