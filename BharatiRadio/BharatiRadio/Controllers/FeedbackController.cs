@@ -10,7 +10,7 @@ namespace BharatiRadio.Controllers
     public class FeedbackController : Controller
     {
 
-        FeedbackContext db = new FeedbackContext();
+        RadioContext db = new RadioContext();
         
          // GET: Feedback
         public ActionResult feedback()

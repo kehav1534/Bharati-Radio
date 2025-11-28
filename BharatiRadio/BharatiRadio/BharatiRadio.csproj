@@ -57,6 +57,8 @@
       <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.3.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -108,6 +110,16 @@
     <Content Include="Content\dashboard.css" />
     <Content Include="Content\styles.css" />
     <Content Include="Global.asax" />
+    <Content Include="Models\Auth.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Auth.edmx</DependentUpon>
+      <LastGenOutput>Auth.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Auth.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Auth.edmx</DependentUpon>
+      <LastGenOutput>Auth1.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -120,8 +132,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
+    <Compile Include="Models\Auth.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Auth.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Auth.cs">
+      <DependentUpon>Auth.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Auth.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Auth.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Auth1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Auth.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Bulletin.cs" />
     <Compile Include="Models\BulletinContext.cs" />
     <Compile Include="Models\Feedback.cs" />
@@ -132,6 +161,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <EntityDeploy Include="Models\Auth.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Auth.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Auth.edmx.diagram">
+      <DependentUpon>Auth.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="Views\Home\Home.cshtml" />
     <Content Include="Views\Home\Programs.cshtml" />
@@ -154,6 +190,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
