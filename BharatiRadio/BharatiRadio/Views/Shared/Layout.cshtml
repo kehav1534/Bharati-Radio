@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    @*<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">*@
 
     <link href="~/Content/styles.css" rel="stylesheet">
 
@@ -27,15 +27,15 @@
     <div class="sidebar">
         <button id="m-btn" onclick="closeMenu()">&times; Close</button>
         <a href="home.html" id="sidebar-element">HOME</a>
-        <a href="#" id="sidebar-element">ABOUT US</a>
-        <a href="#" id="sidebar-element">BULLETIN</a>
-        <a href="#" id="sidebar-element">SHOWS</a>
-        <a href="#" id="sidebar-element">VIDEOS</a>
-        <a href="#" id="sidebar-element">PODCAST</a>
-        <a href="SpecailProgram_rb.html" id="sidebar-element">SPECIAL PROGRAMS</a>
-        <a href="#" id="sidebar-element">CONTACT US</a>
-        <a href="feedback.html" id="sidebar-element">SUGGESTION</a>
-        <a href="login.html" id="sidebar-element">LOGIN</a>
+        <a href="/about-us" id="sidebar-element">ABOUT US</a>
+        <a href="/bulletin" id="sidebar-element">BULLETIN</a>
+        <a href="/shows" id="sidebar-element">SHOWS</a>
+        <a href="/videos" id="sidebar-element">VIDEOS</a>
+        <a href="/Home/Podcast" id="sidebar-element">PODCAST</a>
+        <a href="/programs" id="sidebar-element">SPECIAL PROGRAMS</a>
+        <a href="/contact-us" id="sidebar-element">CONTACT US</a>
+        <a href="/feedback" id="sidebar-element">SUGGESTION</a>
+        <a href="/Auth/login" id="sidebar-element">LOGIN</a>
     </div>
     <!-- Header -->
     <div class="main-container">
@@ -47,16 +47,16 @@
             </div>
             <div class="area-head-col">
                 <div class="area-head-options">
-                    <a href="home.html" class="option">HOME</a>
-                    <a href="" class="option">ABOUT US</a>
-                    <a href="" class="option">BULLETIN</a>
-                    <a href="" class="option">SHOWS</a>
-                    <a href="" class="option">VIDEOS</a>
-                    <a href="" class="option">PODCAST</a>
-                    <a href="SpecailProgram_rb.html" class="option">SPECIAL PROGRAMS</a>
-                    <a href="" class="option">CONTACT US</a>
-                    <a href="feedback.html" class="option">SUGGESTION</a>
-                    <a href="login.html" class="option">LOGIN</a>
+                    <a href="/" class="option">HOME</a>
+                    <a href="/about-us" class="option">ABOUT US</a>
+                    <a href="/bulletin" class="option">BULLETIN</a>
+                    <a href="/shows" class="option">SHOWS</a>
+                    <a href="/Home/videos" class="option">VIDEOS</a>
+                    <a href="/Home/podcast" class="option">PODCAST</a>
+                    <a href="/programs" class="option">SPECIAL PROGRAMS</a>
+                    <a href="/contact-us" class="option">CONTACT US</a>
+                    <a href="/feedback" class="option">SUGGESTION</a>
+                    <a href="/Auth/Login" class="option">LOGIN</a>
                     <div class="menu-btn">
                         <button id="m-btn" onclick="openMenu()">
                             <img width="64" height="64" src="https://img.icons8.com/sf-black/64/FA5252/menu.png" alt="menu" />

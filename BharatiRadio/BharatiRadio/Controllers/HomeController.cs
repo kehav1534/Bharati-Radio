@@ -30,6 +30,18 @@ namespace BharatiRadio.Controllers
         {
             return View();
         }
+        public ActionResult Bulletin()
+        {
+            return View();
+        }
+        public ActionResult Podcast()
+        {
+            return View();
+        }
+        public ActionResult Videos()
+        {
+            return View();
+        }
         private List<Program> GetPrograms()
         {
              List<Program> ProgramVideos = new List<Program>{

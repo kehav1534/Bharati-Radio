@@ -1,31 +1,26 @@
-﻿<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>AboutUs</title>
-</head>
-<body>
-    <div>
-        This is About-Us page.
-        @helper MyListHelper(string[] args)
-        { 
-        <ul>
-            @foreach(var item in args)
-    {
-        <li>
-            @item
-        </li>
-    }
-        </ul>
-    }
-        <label>About Us Secction</label>
-        <div>
-            @MyListHelper(new string[] {"Keshav", "Ayush", "Khushagra"})
-        </div>
-        <br>
-        <label>Another Helper section</label>
-        @MyListHelper(new string[] {"Python", "Java", "C#", "HTML"})
+﻿
+@{
+    ViewBag.Title = "Bulletin";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="area-body">
+    <div class="form-container">
+        <header class="form-header">
+            <h1>About Us</h1>
+        </header>
+        <section class="about-section">
+            <div class="about-video">
+                <video controls poster="video-thumbnail.jpg">
+                    <source src="your-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="about-desc">
+                <p style="color:white;">
+                    Radio Bharati is the exemplary initiative of BVICAM, New Delhi, in the field of broadcasting. It is packed with passion, fueled with various Programmes prepared by students and presents a young style that is energetic and classy. The station encompasses the combination of information, education and entertainment for youngster and is a destination station for all the listeners.<br>
+                    <br>Radio Bharati is a unique blend of immediacy, intimacy, and accessibility that makes it a beloved companion for millions of listeners. As we look to the future of Radio’s enduring legacy and adaptability, we assure that Radio Bharati will remain & sustain as a vital part of our media landscape for generations to come.
+                </p>
+            </div>
+        </section>
     </div>
-</body>
-</html>
+</div>
