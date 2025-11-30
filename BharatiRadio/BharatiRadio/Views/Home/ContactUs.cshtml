@@ -1,14 +1,65 @@
 ﻿
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>ContactUs</title>
-</head>
-<body>
-    <div>
-        This is Contact-Us Page.
+@{
+    ViewBag.Title = "Videos";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
 
+<div class="area-body">
+    <div class="form-container">
+        <header class="form-header">
+            <h1>Contact Us</h1>
+        </header>
+        <form class="suggestion-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email Address">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="tel" name="contact" placeholder="Contact Number">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="location" placeholder="Location">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="subject" placeholder="Subject">
+            </div>
+
+            <div class="form-group">
+                <textarea name="suggestion" rows="5" placeholder="suggestion for shows"></textarea>
+            </div>
+
+            <div class="form-footer">
+                <button type="submit" class="submit-btn">SUBMIT</button>
+            </div>
+        </form>
+        <br />
+        <section class="visit-section">
+            <header class="form-header">
+                <h1>Visit us</h1>
+            </header>
+            <div class="glass" style="display: flex; gap:15px">
+                <div class="visit-map">
+                    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=77.1000,28.6542,77.1250,28.6750&layer=mapnik" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="visit-info" style="color:white">
+                    <div class="visit-title">Address :</div>
+                    <div>
+                        Bharat Vidyapeeth's Institute of Computer Applications and Management (BVICAM)<br>
+                        A-4, Paschim Vihar, Rohtak Road, New Delhi – 110063 (INDIA)<br>
+                        <strong>Tel:</strong> +91-11-25275055<br>
+                        <strong>Fax:</strong> +91-11-25255056<br>
+                        <strong>Mobile:</strong> +91-9212022066<br>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-</body>
-</html>
+</div>

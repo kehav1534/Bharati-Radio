@@ -195,17 +195,16 @@
 <body>
     @Html.Raw(TempData["msg"])
     <div class="sidebar">
-        <button id="m-btn" onclick="closeMenu()">&times; Close</button>
-        <a href="/" id="sidebar-element">HOME</a>
-        <a href="/about-us" id="sidebar-element">ABOUT US</a>
-        <a href="#" id="sidebar-element">BULLETIN</a>
-        <a href="/shows" id="sidebar-element">SHOWS</a>
-        <a href="/videos" id="sidebar-element">VIDEOS</a>
-        <a href="/podcast" id="sidebar-element">PODCAST</a>
-        <a href="/programs" id="sidebar-element">SPECIAL PROGRAMS</a>
-        <a href="/contact-us" id="sidebar-element">CONTACT US</a>
-        <a href="/feedback" id="sidebar-element">SUGGESTION</a>
-        <a href="/auth/login" id="sidebar-element">LOGIN</a>
+        <a href="/" class="option">HOME</a>
+        <a href="/about-us" class="option">ABOUT US</a>
+        <a href="/bulletin" class="option">BULLETIN</a>
+        <a href="/shows" class="option">SHOWS</a>
+        <a href="/Home/videos" class="option">VIDEOS</a>
+        <a href="/Home/podcast" class="option">PODCAST</a>
+        <a href="/programs" class="option">SPECIAL PROGRAMS</a>
+        <a href="/contact-us" class="option">CONTACT US</a>
+        <a href="/feedback" class="option">SUGGESTION</a>
+        <a href="/Auth/Login" class="option">LOGIN</a>
     </div>
     <!-- Header -->
     <div class="main-container">

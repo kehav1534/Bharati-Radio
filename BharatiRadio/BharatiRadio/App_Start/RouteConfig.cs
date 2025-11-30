@@ -38,6 +38,11 @@ namespace BharatiRadio
                 defaults: new { controller = "Shows", action = "Show", id = UrlParameter.Optional }
                 );
             routes.MapRoute(
+                name: "Bulletin",
+                url: "bulletin/",
+                defaults: new { controller = "Home", action = "Bulletin", id = UrlParameter.Optional }
+                );
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Home", id = UrlParameter.Optional }
