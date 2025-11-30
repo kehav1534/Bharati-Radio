@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model List<BharatiRadio.Models.Bulletin>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -349,25 +350,11 @@
                 </header>
                 <div class="news-container">
                     <div class="news-items" id="newsItems">
-                        <div class="news-item">Breaking News: Market hits an all-time high!</div>
-                        <div class="news-item">Weather Update: Expect heavy rainfall tomorrow.</div>
-                        <div class="news-item">Sports: Local team wins championship!</div>
-                        <div class="news-item">Tech: New smartphone launched with amazing features.</div>
-                        <div class="news-item">Weather Update: Expect heavy rainfall tomorrow.</div>
-                        <div class="news-item">Sports: Local team wins championship!</div>
-                        <div class="news-item">Tech: New smartphone launched with amazing features.</div>
-                        <div class="news-item">Weather Update: Expect heavy rainfall tomorrow.</div>
-                        <div class="news-item">Sports: Local team wins championship!</div>
-                        <div class="news-item">Tech: New smartphone launched with amazing features.</div>
-                        <div class="news-item">Weather Update: Expect heavy rainfall tomorrow.</div>
-                        <div class="news-item">Sports: Local team wins championship!</div>
-                        <div class="news-item">Tech: New smartphone launched with amazing features.</div>
-                        <div class="news-item">Weather Update: Expect heavy rainfall tomorrow.</div>
-                        <div class="news-item">Sports: Local team wins championship!</div>
-                        <div class="news-item">Tech: New smartphone launched with amazing features.</div>
-                        <div class="news-item">Weather Update: Expect heavy rainfall tomorrow.</div>
-                        <div class="news-item">Sports: Local team wins championship!</div>
-                        <div class="news-item">Tech: New smartphone launched with amazing features.</div>
+                        @foreach (var item in Model)
+                        {
+                            <div class="news-item"><a href="@item.link">@item.title</a></div>
+
+                        }
                     </div>
                 </div>
                 <script>

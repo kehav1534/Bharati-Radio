@@ -9,9 +9,13 @@ namespace BharatiRadio.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        RadioContext db = new RadioContext();
+
         public ActionResult Home()
         {
-            return View();
+            var bltn = db.Bulletins.Where(model=> model.status=="Published").ToList();
+
+            return View(bltn);
         }
         public ActionResult Programs()
         {
