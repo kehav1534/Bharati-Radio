@@ -26,17 +26,19 @@ body {
     margin: 0;
     min-height: 100vh;
     color: var(--text-light);
+    background-image: url('../Images/background.jpg'); /* Ensure path is correct */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* CHANGE THIS: 'flex-start' stops the squeezing/overlap */
+    justify-content: flex-start;
     align-items: center;
 }
 
 /* Layout Components */
-.main-container {
+.nav-container {
     display: grid;
     text-align: left;
     width: 100%;
@@ -53,7 +55,7 @@ body {
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 4;
+    z-index: 30;
 }
 
 .area-head-options {

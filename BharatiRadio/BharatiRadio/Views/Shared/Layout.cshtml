@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    @*<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">*@
 
-    <link href="~/Content/styles.css" rel="stylesheet">
+    <link href="~/Content/styles2.css" rel="stylesheet">
 
     <script>
         function openMenu() {
@@ -37,13 +36,12 @@
         <a href="/feedback" id="sidebar-element">SUGGESTION</a>
         <a href="/Auth/login" id="sidebar-element">LOGIN</a>
     </div>
-    <!-- Header -->
+
     <div class="main-container">
-        <!-- Header -->
+
         <div class="area-head">
             <div class="area-head-col">
                 <img src="~/Content/Images/bharti_radio_logo.jpg" alt="Radio Bharati Logo" id="brand-img">
-
             </div>
             <div class="area-head-col">
                 <div class="area-head-options">
@@ -66,15 +64,16 @@
             </div>
         </div>
 
-        @RenderBody()
-
-        <div class="area-footer">
+        
+            @RenderBody()
+        
+        
+        @*<div class="area-footer">
             <div class="footer-block">
                 <h2>A-4, Paschim Vihar, Opp. Paschim Vihar (East) Metro Station, Rohtak Road, New Delhi, Delhi 110063</h2>
             </div>
+        </div>*@
 
-
-        </div>
-
+    </div>
 </body>
 </html>

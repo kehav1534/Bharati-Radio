@@ -1,0 +1,766 @@
+﻿/*-----------------navbar and footer-------------*/
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    color: var(--text-light);
+    background-image: url('../Images/background.jpg'); /* Check your path! */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* CRITICAL FIX: Starts from top */
+    align-items: center;
+    font-family: 'Gothic A1', Helvetica, Arial, Lucida, sans-serif;
+}
+
+
+
+/* This pushes the footer to the bottom if content is short */
+/*.content-wrapper {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}*/
+
+/* =========================
+   3. NAVIGATION BAR (HEADER)
+   ========================= */
+.area-head {
+    background-color: var(--bg-light);
+    border-bottom: 4px solid red;
+    border-radius: 0 0 15px 15px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Fixed height is important for the spacing calculation */
+    background-color: #ffffff;
+    border-bottom: 5px solid #ff3b3b; /* Bright Red Line */
+    border-radius: 0 0 25px 25px;     /* Rounded bottom corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px; /* Side spacing */
+    z-index: 1000;   /* High number ensures it sits ON TOP of everything */
+    box-sizing: border-box;
+}
+
+.area-head-col {
+    padding: 0 20px;
+}
+
+#brand-img {
+    width: 120px;
+    height: 100px;
+}
+
+.area-head-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: auto;
+}
+
+/* Nav Links */
+.option {
+    color: orangered;
+    font-size: 18px;
+    white-space: nowrap;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 0em 0.1em 0.1em rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+    .option:hover {
+        color: brown;
+        text-decoration: none;
+    }
+
+/* Mobile Menu Button */
+.menu-btn {
+    display: none; /* Hidden by default on desktop */
+}
+
+#m-btn {
+    border: 0;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+/* =========================
+   4. SIDEBAR (MOBILE MENU)
+   ========================= */
+.sidebar {
+    display: none;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    position: fixed;
+    background-color: white;
+    height: 100vh;
+    border-left: 1px solid #ddd;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+}
+
+#sidebar-element {
+    padding: 15px 20px;
+    background-color: var(--bg-light);
+    display: block;
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+
+    #sidebar-element:hover {
+        background-color: ghostwhite;
+        color: brown;
+    }
+
+/* =========================
+   5. FOOTER
+   ========================= */
+.area-footer {
+    width: 100%;
+    margin-top: auto;
+    /* Check that your background color is visible */
+    background-color: brown;
+    color: white;
+}
+
+.footer-block {
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    margin-top: auto; /* Ensures it sits at bottom of flex container */
+}
+
+    .footer-block h2 {
+        font-size: 16px;
+        text-align: center;
+        margin: 0;
+    }
+
+/* =========================
+   6. RESPONSIVE QUERIES
+   ========================= */
+/* Tablet/Mobile: Hide top links, Show Menu Button */
+@media screen and (max-width: 1075px) {
+    .option {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+}
+
+/* Desktop: Hide Menu Button */
+@media (min-width: 1076px) {
+    .menu-btn {
+        display: none;
+    }
+}
+
+/* Large Screens: Adjust Header Layout */
+@media screen and (min-width: 1076px) and (max-width: 1384px) {
+    .area-head-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .area-head-options {
+        justify-self: center;
+        width: 100vw;
+        max-width: 1600px;
+        display: grid;
+        column-gap: 30px;
+        row-gap: 20px;
+        grid-template-columns: repeat(auto-fit, 190px);
+    }
+}
+
+/* ------------------Landing page-------------- */
+.hero-section {
+    margin: 0;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80vw;
+    box-sizing: border-box;
+}
+
+.container1 {
+    width: 100%;
+    display: flex;
+/*    margin-top: 0;*/
+    margin:auto;
+    gap: 30px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.events {
+    border: 1px solid #000;
+    height: 300px;
+    width: 700px;
+    margin-right: 20px;
+}
+/* ------------------Bulletin Board Styles-------------- */
+.bulletin-board {
+    width: 30%;
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.bulletin-header {
+    background: linear-gradient(135deg, #ff4b4b, #d60000);
+    color: white;
+    padding: 15px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 20;
+}
+
+.news-window {
+    height: 350px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.bulletin-item {
+    background-color: white;
+    padding: 15px;
+    display: block;
+    margin: 10px 15px;
+    border-radius: 6px;
+    border-left: 5px solid #d60000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    color: #444;
+    font-size: 14px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .bulletin-item:hover {
+        transform: scale(1.02); /* Grows slightly */
+        box-shadow: 0 5px 15px rgba(214, 0, 0, 0.2);
+        background-color: #fffdfd;
+    }
+
+.date {
+    display: block;
+    font-size: 10px;
+    color: #999;
+    font-weight: bold;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.scroll-wrapper {
+    animation: scrollUp 10s linear infinite;
+}
+
+.bulletin-board:hover .scroll-wrapper {
+    animation-play-state: paused;
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+/* --------------------event(silder)------------------  */
+.slider-container {
+    width: 70%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* 3. THE SLIDES STRIP */
+.slides-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+    .slides-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        flex-shrink: 0; /* Prevents images from squishing */
+    }
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: 0.3s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.slider-container:hover .nav-btn {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .dot.active {
+        background-color: white;
+        transform: scale(1.2);
+    }
+
+
+
+
+
+
+
+@keyframes slideshow {
+
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+
+    75% {
+        margin-left: -300%;
+    }
+
+    95% {
+        margin-left: -300%;
+    }
+
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+/* RESPONSIVE LAYOUT FIX */
+@media screen and (max-width: 1100px) {
+
+    /* 1. Stack the items vertically */
+    .container1 {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 30px; /
+    }
+
+   
+    .slider-container {
+        width: 100%; 
+        max-width: 100%; 
+        height: auto; 
+        aspect-ratio: 16/9;
+    }
+
+   
+    .bulletin-board {
+        width: 90%; 
+        max-width: 400px; 
+    }
+}
+/* ---------------------conatiner2-------------------- */
+.container2 {
+    width: 100%;
+    min-height: 450px;
+    margin: 40px auto;
+    background-color: #fef1f1;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+}
+
+.section-title {
+    /* Similar Red Gradient style, but independent code */
+    background: linear-gradient(90deg, #d60000, #ff4b4b);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%; /* Fills the top bar */
+}
+
+/* 3. The Grid */
+.video-grid {
+    display: flex;
+    justify-content: center; /* Centers items */
+    align-items: flex-start;
+    flex-wrap: wrap; /* KEY: Allows cards to drop to next line */
+    gap: 30px; /* Space between cards */
+    padding: 30px;
+}
+
+/* 4. Compact Card Styling */
+.video-card {
+    background: white;
+    /* Desktop: 30% width allows 3 to fit side-by-side */
+    width: 30%;
+    min-width: 280px; /* Never get smaller than this */
+
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+    .video-card:hover {
+        transform: translateY(-5px);
+    }
+
+.video-frame {
+    width: 100%;
+    height: 150px;
+    background: #000;
+}
+
+    .video-frame iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+@media screen and (max-width: 1000px) {
+    .video-card {
+        /* Tablet: 45% width allows 2 cards per row */
+        width: 45%;
+    }
+}
+
+/* Mobile View (Screens smaller than 700px) */
+@media screen and (max-width: 700px) {
+    .container2 {
+        width: 95%; /* Use full screen width */
+        padding: 0; /* Remove extra side padding */
+    }
+
+    .video-grid {
+        padding: 20px; /* Smaller padding inside */
+    }
+
+    .video-card {
+        /* Mobile: 100% width makes them stack 1 big card per row */
+        width: 100%;
+    }
+}
+.card-content {
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .card-content h3 {
+        margin: 0;
+        font-size: 16px;
+        color: #333;
+    }
+
+.more-btn {
+    background-color: #333; /* Dark button for contrast */
+    color: white;
+    width: auto;
+    justify-self: center;
+    align-self: center;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.3s;
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+}
+
+    .more-btn:hover {
+        background-color: #d60000;
+    }
+
+/* ------------------End of Landing page-------------- */
+
+
+/*----------------------login-----------------------------*/
+/* Login Specific Styles */
+.login-container {
+    display: flex;
+    width: 900px;
+    max-width: 95%;
+    height: 450px;
+    margin: auto;
+    /* The Glass Effect */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px); /* Blurs the background behind the card */
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden; /* Keeps child elements inside rounded corners */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* 3. Left Side: Welcome Section */
+.welcome-section {
+    flex: 1; /* Takes 50% width */
+    background: linear-gradient(135deg, #d60000, #ff4b4b); /* Red Gradient */
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    position: relative;
+}
+
+    .welcome-section h1 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .welcome-section p {
+        font-size: 16px;
+        line-height: 1.6;
+        opacity: 0.9;
+    }
+
+/* 4. Right Side: Form Section */
+.form-section {
+    flex: 1; /* Takes 50% width */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly darker area for inputs */
+}
+
+/* 5. Input Fields Styling */
+.input-group {
+    background: #f0f2f5;
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 30px; /* Pill shape */
+}
+
+    .input-group i {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ccc;
+        font-size: 18px;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 15px 15px 15px 45px; /* Extra padding on left for the icon */
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 30px; /* Pill shape */
+        color: white;
+        font-size: 16px;
+        outline: none;
+        transition: 0.3s;
+        /* Fix for browser placeholder spacing */
+        box-sizing: border-box;
+    }
+
+        /* Glow effect when clicking inside */
+        .input-group input:focus {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #d60000;
+            box-shadow: 0 0 10px rgba(214, 0, 0, 0.3);
+        }
+
+        .input-group input::placeholder {
+            color: #bbb;
+        }
+
+/* 6. Button Styling */
+.btn-field {
+    width: 100%;
+    margin-top: 10px;
+}
+
+    button:hover {
+        background: #ff3b3b;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(214, 0, 0, 0.4);
+    }
+
+/* 7. Forgot Password Link */
+.login-links {
+    margin-top: 20px;
+    text-align: center;
+    color: #bbb;
+}
+
+    .login-links a {
+        color: #bbb;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+        .login-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+.login-body-wrapper {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh; /* changed from height to min-height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 15px;
+    background: #d60000;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 1px;
+}
+
+    .login-container button:hover {
+        background: #ff3b3b;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(214, 0, 0, 0.4);
+    }
+/* 8. Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .login-container {
+        flex-direction: column; /* Stack top to bottom */
+        height: auto;
+    }
+
+    .welcome-section {
+        padding: 40px 30px;
+        text-align: center;
+    }
+
+    .form-section {
+        padding: 40px 30px;
+    }
+}
+

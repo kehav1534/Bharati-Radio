@@ -108,7 +108,9 @@
     <Content Include="Content\Images\bvicam.jpg" />
     <Content Include="Content\Images\RB_LOGIN_IMAGE.jpg" />
     <Content Include="Content\dashboard.css" />
+    <Content Include="Content\script2.js" />
     <Content Include="Content\styles.css" />
+    <Content Include="Content\styles2.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
