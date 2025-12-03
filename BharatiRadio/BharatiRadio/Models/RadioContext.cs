@@ -10,7 +10,6 @@ namespace BharatiRadio.Models
     {
         public DbSet<Feedback> Feedbacks { get; set; }
         public DbSet<Bulletin> Bulletins { get; set; }
-
-        //public DbSet<Auth> Auth { get; set; }
+        public DbSet<Auth> Auths { get; set; }
     }
 }
