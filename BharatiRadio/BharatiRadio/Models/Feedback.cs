@@ -15,5 +15,7 @@ namespace BharatiRadio.Models
         public string location { get; set; }
         public string subject { get; set; }
         public string msg { get; set; }
+        public int marked { get; set; }
+        public int viewed { get; set; }
     }
 }

@@ -14,6 +14,7 @@ namespace BharatiRadio.Controllers
         RadioContext db = new RadioContext();
 
         // GET: Admin
+        [Authorize]
         public ActionResult Index()
         {
             var viewModel = new AdminViewModel
@@ -32,6 +33,11 @@ namespace BharatiRadio.Controllers
                 return Json(new { success = false, message = "Not found" },
                     JsonRequestBehavior.AllowGet);
             }
+            if (feedback.viewed == 0)
+            {
+                feedback.viewed = 1;
+                db.SaveChanges();
+            }
             var data = new
             {
                 success = true,
@@ -41,7 +47,8 @@ namespace BharatiRadio.Controllers
                 contact_no = feedback.contact_no,
                 location = feedback.location,
                 sub = feedback.subject,
-                msg = feedback.msg
+                msg = feedback.msg,
+                mark = feedback.marked
             };
 
             return Json(data, JsonRequestBehavior.AllowGet);
@@ -121,6 +128,50 @@ namespace BharatiRadio.Controllers
                 TempData["msg"] = "Error in updating bulletin. Please try again.";
             }
             return RedirectToAction("Index", "Admin");
+        }
+
+        [HttpPost]
+        public ActionResult DeleteBulletin(int Id)
+        {
+            var row = db.Bulletins.Where(model=> model.Id == Id ).FirstOrDefault();
+            if(row!=null)
+            { 
+                db.Bulletins.Remove(row);
+                int a = db.SaveChanges();
+            }
+            
+            return RedirectToAction("Index", "Admin");
+        }
+
+
+        [HttpPost]
+        public ActionResult DeleteSuggestion(int Id)
+        {
+            var f = db.Feedbacks.Where(model => model.Id == Id).FirstOrDefault();
+            if (f != null)
+            {
+                db.Feedbacks.Remove(f);
+                int a = db.SaveChanges();
+            }
+
+            return RedirectToAction("Index", "Admin");
+        }
+        [HttpPost]
+        public ActionResult Bookmark(int id)
+        {
+            var mark = db.Feedbacks.Where(modal => modal.Id == id).FirstOrDefault();
+            if (mark != null)
+            {
+                mark.marked = mark.marked == 1 ? 0 : 1;
+            }
+            int a= db.SaveChanges();
+            if (a > 0)
+            {
+                return Json(new {success = true}, JsonRequestBehavior.DenyGet);
+
+            }
+            return Json(new { success = false, message = "Not Found." },
+                    JsonRequestBehavior.DenyGet);
         }
     }
 }
