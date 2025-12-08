@@ -13,7 +13,7 @@ namespace BharatiRadio.Controllers
 
         public ActionResult Home()
         {
-            var bltn = db.Bulletins.Where(model=> model.status=="Published").ToList();
+            var bltn = db.Bulletins.Where(model => model.status == "Published").ToList();
 
             return View(bltn);
         }
@@ -42,20 +42,42 @@ namespace BharatiRadio.Controllers
         {
             return View();
         }
+
+        public ActionResult Shows()
+        {
+            var shows = GetShowsList();
+            return View(shows);
+        }
         private List<Program> GetPrograms()
         {
-             List<Program> ProgramVideos = new List<Program>{
-                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day"},
-                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day"},
-                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day"},
-                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day"},
-                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day"},
-                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day"},
-                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day"},
-                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day"},
-                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day"}
+            List<Program> ProgramVideos = new List<Program>{
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Cultural"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Cultural"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Cultural"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Academic"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Academic"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Academic"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Sports"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Sports"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Sports"}
+            };
+            return ProgramVideos;
+        }
+
+        private List<Program> GetShowsList()
+        {
+            List<Program> ProgramVideos = new List<Program>{
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Cultural"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Cultural"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Cultural"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Academic"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Academic"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Academic"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Sports"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Sports"},
+                new Program(){link="https://www.youtube.com/embed", title = "Radio Bharati | Special program on Education Day", description = "no discription", category = "Sports"}
             };
             return ProgramVideos;
         }
     }
-}
+    }

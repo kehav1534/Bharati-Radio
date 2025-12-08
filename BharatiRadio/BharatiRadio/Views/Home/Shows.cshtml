@@ -1,9 +1,72 @@
-﻿
+﻿@model IEnumerable<BharatiRadio.Models.Program>
+
 @{
-    ViewBag.Title = "Videos";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<div class="area-body">
-    <h1 style="color:white;">Comming Soon...</h1>
+
+<div class="hero-section">
+
+    <div class="page-header">
+        <h1>Shows</h1>
+    </div>
+
+    <div class="program-section-card">
+        <div class="category-title">🎭 Cultural Events</div>
+        <div class="programs-grid">
+            @foreach (var video in Model.Where(p => p.category == "Cultural"))
+            {
+                <div class="program-card">
+                    <div class="video-thumbnail">
+                        <iframe src="@video.link" allowfullscreen></iframe>
+                    </div>
+                    <div class="program-info">
+                        <h3>@video.title</h3>
+                        <p>@video.description</p>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+
+    <div class="program-section-card">
+        <div class="category-title">🎓 Academic Highlights</div>
+        <div class="programs-grid">
+            @foreach (var video in Model.Where(p => p.category == "Academic"))
+            {
+                <div class="program-card">
+                    <div class="video-thumbnail">
+                        <iframe src="@video.link" allowfullscreen></iframe>
+                    </div>
+                    <div class="program-info">
+                        <h3>@video.title</h3>
+                        <p>@video.description</p>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="program-section-card">
+        <div class="category-title">🏆 Sports & Action</div>
+        <div class="programs-grid">
+            @foreach (var video in Model.Where(p => p.category == "Sports"))
+            {
+                <div class="program-card">
+                    <div class="video-thumbnail">
+                        <iframe src="@video.link" allowfullscreen></iframe>
+                    </div>
+                    <div class="program-info">
+                        <h3>@video.title</h3>
+                        <p>@video.description</p>
+                        <button class="watch-btn">Watch Now</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
 </div>

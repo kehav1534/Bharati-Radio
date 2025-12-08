@@ -3,24 +3,14 @@
     ViewBag.Title = "Radio Bharati";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/Content/styles2.css">
-    <title>Homepage</title>
-</head>
-
-<body>
-    <div class="hero-section">
+    <div class="home-page-container">
 
         <div class="container1">
             <div class="slider-container">
 
                 <div class="slides-wrapper" id="slides">
-                    <img src="https://picsum.photos/800/400?random=1" alt="Img 1">
+                    <img src="~/Content/Images/radio1.jpeg" alt="Img 1">
                     <img src="https://picsum.photos/800/400?random=2" alt="Img 2">
                     <img src="https://picsum.photos/800/400?random=3" alt="Img 3">
                 </div>
@@ -45,35 +35,7 @@
                                 @item.title
                             </a>
                         }
-                        @*<a href="#" class="bulletin-item">
-                            <span class="date">URGENT</span>
-                            Meeting rescheduled to 3 PM.
-                        </a>
-                        <a href="#" class="bulletin-item">
-                            <span class="date">INFO</span>
-                            Remember to submit reports.
-                        </a>
-                        <a href="#" class="bulletin-item">
-                            <span class="date">TEAM</span>
-                            Welcome our new team member!
-                        </a>
-
-                        <a href="#" target="_blank" class="bulletin-item">
-                            <span class="date">TODAY</span>
-                            New cafeteria menu is live! (Click me)
-                        </a>
-                        <a href="#" class="bulletin-item">
-                            <span class="date">URGENT</span>
-                            Meeting rescheduled to 3 PM.
-                        </a>
-                        <a href="#" class="bulletin-item">
-                            <span class="date">INFO</span>
-                            Remember to submit reports.
-                        </a>
-                        <a href="#" class="bulletin-item">
-                            <span class="date">TEAM</span>
-                            Welcome our new team member!
-                        </a>*@
+                       
 
                     </div>
                 </div>
@@ -120,7 +82,9 @@
                     </div>
                 </div>
             </div>
-            <button class="more-btn">More Details</button>
+            <a href="@Url.Action("Programs", "Home")" class="more-btn">
+                More Details
+            </a>
         </div>
         <div class="container2">
             <h2 class="section-title">✨ shows</h2>
@@ -162,10 +126,11 @@
                     </div>
                 </div>
             </div>
-            <button class="more-btn">More Details</button>
+            <a href="@Url.Action("Shows", "Home")" class="more-btn">
+                More Details
+            </a>
         </div>
     </div>
-</body>
-<script src="~/Content/script2.js"></script>
 
-</html>
+
+

@@ -108,6 +108,7 @@
     <Content Include="Content\Images\bvicam.jpg" />
     <Content Include="Content\Images\RB_LOGIN_IMAGE.jpg" />
     <Content Include="Content\dashboard.css" />
+    <Content Include="Content\Images\radio1.jpeg" />
     <Content Include="Content\script2.js" />
     <Content Include="Content\styles.css" />
     <Content Include="Content\styles2.css" />
@@ -132,6 +133,7 @@
     <Compile Include="Models\FeedbackContext.cs" />
     <Compile Include="Models\Program.cs" />
     <Compile Include="Models\RadioContext.cs" />
+    <Compile Include="Models\Shows.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

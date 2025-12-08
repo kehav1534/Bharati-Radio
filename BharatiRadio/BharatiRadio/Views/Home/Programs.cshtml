@@ -1,39 +1,65 @@
-﻿@model List<BharatiRadio.Models.Program>
-
-@{
+﻿@{
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
+<div class="hero-section">
 
-
-<div class="area-body">
-    <div class="form-container">
-        <header class="form-header">
-            <h1>Special Programs</h1>
-        </header>
-
-        <div class="video-section-container">
-
-            <div class="grid-container">
-                @foreach (var videos in Model)
-                {
-                    <div class="video-item">
-                        <div class="video-embed">
-                            <iframe src=@videos.link
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" style="border-radius: 10px;"
-                                    allowfullscreen></iframe>
-                        </div>
-                        <p>@videos.title</p>
-                    </div>
-                }
-            </div>
-            <div class="button-container">
-                <button class="load-more-btn">Load More</button>
-
-            </div>
-        </div>
+    <div class="page-header">
+        <h1>Special Programs</h1>
     </div>
 
+    <div class="events-container">
+
+        <div class="event-row">
+            <div class="event-media">
+                <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ" allowfullscreen></iframe>
+            </div>
+            <div class="event-details">
+                <span class="date-badge">📅 NOV 2025</span>
+                <h2>Annual Convocation</h2>
+                <p>A proud moment for Bharati Radio as we graduated our senior batch. Chief Guest Dr. R.K. Patil delivered an inspiring speech on the future of digital media.</p>
+                <ul class="highlights-list">
+                    <li><i class="fas fa-check"></i> Keynote Address</li>
+                    <li><i class="fas fa-check"></i> Award Distribution</li>
+                </ul>
+                <a href="https://www.youtube.com/embed/LXb3EKWsInQ" class="watch-btn" target="_blank">
+                    Watch Playlist <i class="fab fa-youtube"></i>
+                </a>
+                
+            </div>
+        </div>
+
+        <div class="event-row reverse">
+            <div class="event-media">
+                <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" allowfullscreen></iframe>
+            </div>
+            <div class="event-details">
+                <span class="date-badge">📅 AUG 2025</span>
+                <h2>Independence Day</h2>
+                <p>Celebrating the spirit of freedom! Our students organized a grand parade followed by a patriotic drama performance.</p>
+                <ul class="highlights-list">
+                    <li><i class="fas fa-check"></i> Flag Hoisting</li>
+                    <li><i class="fas fa-check"></i> Patriotic Songs</li>
+                </ul>
+                <a href="https://www.youtube.com/embed/9bZkp7q19f0" class="watch-btn" target="_blank">
+                    Watch Playlist <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="event-row">
+            <div class="event-media">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+            </div>
+            <div class="event-details">
+                <span class="date-badge">📅 JAN 2025</span>
+                <h2>Grand Alumni Meet</h2>
+                <p>Welcoming back our stars! A nostalgic evening filled with laughter, networking, and revisiting old campus memories.</p>
+                <a href="https://www.youtube.com/embed/dQw4w9WgXcQ" class="watch-btn" target="_blank">
+                    Watch Playlist <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
 </div>

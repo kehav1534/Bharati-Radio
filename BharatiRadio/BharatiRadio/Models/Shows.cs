@@ -5,7 +5,7 @@ using System.Web;
 
 namespace BharatiRadio.Models
 {
-    public class Program
+    public class Shows
     {
         public string link { get; set; }
         public string title { get; set; }

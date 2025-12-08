@@ -45,13 +45,13 @@ html, body {
     height: 100px; /* Fixed height is important for the spacing calculation */
     background-color: #ffffff;
     border-bottom: 5px solid #ff3b3b; /* Bright Red Line */
-    border-radius: 0 0 25px 25px;     /* Rounded bottom corners */
+    border-radius: 0 0 25px 25px; /* Rounded bottom corners */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 40px; /* Side spacing */
-    z-index: 1000;   /* High number ensures it sits ON TOP of everything */
+    z-index: 1000; /* High number ensures it sits ON TOP of everything */
     box-sizing: border-box;
 }
 
@@ -201,10 +201,13 @@ html, body {
 }
 
 /* ------------------Landing page-------------- */
-.hero-section {
+
+/* currently home-page container and hero section have same css */
+
+.home-page-container {
     margin: 0;
     padding-bottom: 50px;
-    min-height: 100vh;
+    /*    min-height: 100vh;*/
     display: flex;
     flex-direction: column;
     justify-self: center;
@@ -212,14 +215,30 @@ html, body {
     align-items: center;
     width: 80vw;
     box-sizing: border-box;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.hero-section {
+    position: relative;
+    margin: 0;
+    padding-bottom: 50px;
+/*     min-height: 900px; */
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80vw;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .container1 {
-    width: 100%;
+    width: 96%;
     display: flex;
-/*    margin-top: 0;*/
-    margin:auto;
-    gap: 30px;
+    /*    margin-top: 0;*/
+    margin: auto;
+    gap:30px;
     text-align: center;
     padding: 20px;
     border: 1px solid #ccc;
@@ -444,23 +463,24 @@ html, body {
 
     /* 1. Stack the items vertically */
     .container1 {
-        flex-direction: column; 
-        align-items: center; 
-        gap: 30px; /
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        /
     }
 
-   
+
     .slider-container {
-        width: 100%; 
-        max-width: 100%; 
-        height: auto; 
+        width: 100%;
+        max-width: 100%;
+        height: auto;
         aspect-ratio: 16/9;
     }
 
-   
+
     .bulletin-board {
-        width: 90%; 
-        max-width: 400px; 
+        width: 90%;
+        max-width: 400px;
     }
 }
 /* ---------------------conatiner2-------------------- */
@@ -532,6 +552,7 @@ html, body {
         height: 100%;
         border: none;
     }
+
 @media screen and (max-width: 1000px) {
     .video-card {
         /* Tablet: 45% width allows 2 cards per row */
@@ -555,6 +576,7 @@ html, body {
         width: 100%;
     }
 }
+
 .card-content {
     padding: 12px 15px;
     display: flex;
@@ -583,7 +605,7 @@ html, body {
     margin-bottom: 6px;
     white-space: nowrap;
 }
-}
+
 
     .more-btn:hover {
         background-color: #d60000;
@@ -670,7 +692,7 @@ html, body {
         background: rgba(255, 255, 255, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 30px; /* Pill shape */
-        color: white;
+        /* color: white; */
         font-size: 16px;
         outline: none;
         transition: 0.3s;
@@ -695,11 +717,11 @@ html, body {
     margin-top: 10px;
 }
 
-    button:hover {
-        background: #ff3b3b;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(214, 0, 0, 0.4);
-    }
+button:hover {
+    background: #ff3b3b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(214, 0, 0, 0.4);
+}
 
 /* 7. Forgot Password Link */
 .login-links {
@@ -719,6 +741,7 @@ html, body {
             color: white;
             text-decoration: underline;
         }
+
 .login-body-wrapper {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     min-height: 100vh; /* changed from height to min-height */
@@ -764,3 +787,534 @@ html, body {
     }
 }
 
+/* --------------------feedback------------------ */
+
+.feedback-body-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    /* Dark Red Gradient Background (Matches Login Page) */
+    /* background: linear-gradient(135deg, #1e1e1e, #5a0000); */
+    /* background-color: #f0f2f5; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px; /* Padding for mobile screens */
+    box-sizing: border-box;
+}
+
+/* 2. Page Header (Sleek & Modern) */
+.page-header {
+    /* Your Theme: 90deg Gradient */
+    background: linear-gradient(90deg, #d60000, #ff4b4b);
+    /* WIDTH: Wide but controlled */
+    width: 95%;
+    max-width: 1100px;
+    /* SPACING */
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 12px 0;
+    /* SHAPE: Sharp but smooth corners */
+    border-radius: 8px;
+    /* SLEEK EDGES: Thin, crisp lines */
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /* GLOW: Tighter, less blurry shadow */
+    box-shadow: 0 8px 20px rgba(214, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+    .page-header h1 {
+        color: white;
+        font-size: 24px; /* Slightly smaller font looks more elegant */
+        font-weight: 700;
+        text-transform: uppercase;
+        /* WIDE SPACING = SLEEK LOOK */
+        letter-spacing: 4px;
+        margin: 0;
+        /* Subtle text shadow */
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+/* 3. The Glass Form Card */
+.suggestion-form {
+    width: 100%;
+    max-width: 700px; /* Limits width on big screens */
+    /* background: rgba(255, 255, 255, 0.05); */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    /* padding: 40px; */
+    /* border-radius: 20px; */
+    /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5); */
+    box-sizing: border-box;
+    /* Red-Tinted Glass */
+    /* background: rgba(100, 0, 0, 0.4);  */
+    background-color: #fef1f1;
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid rgba(255, 100, 100, 0.2); /* Reddish border */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* 4. Form Layout (Rows & Groups) */
+.form-row {
+    display: flex;
+    gap: 20px; /* Space between side-by-side inputs */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1; /* Makes inputs grow to fill space */
+    width: 100%;
+    margin-bottom: 20px; /* Space below single inputs */
+}
+
+/* Remove bottom margin for groups inside a row to avoid double spacing */
+.form-row .form-group {
+    margin-bottom: 0;
+}
+
+/* 5. Input Fields & Textarea */
+input, textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 30px; /* Pill Shape */
+    font-size: 15px;
+    color: #333;
+    outline: none;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    box-sizing: border-box; /* Prevents padding from breaking layout */
+}
+
+/* Specific style for Textarea (Message box) */
+textarea {
+    border-radius: 20px; /* Slightly less rounded for the big box */
+    resize: vertical; /* Allows resizing only vertically */
+    font-family: 'Poppins', sans-serif;
+}
+
+    /* Input Focus State */
+    input:focus, textarea:focus {
+        background: #fff;
+        box-shadow: 0 0 0 3px rgba(214, 0, 0, 0.3); /* Red Glow */
+    }
+
+/* 6. Footer Area (Captcha & Button) */
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Captcha Styling */
+/* .captcha {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.captcha-input {
+    width: 60px;
+    padding: 8px;
+    margin-left: 15px;
+    text-align: center;
+    border-radius: 8px; 
+} */
+
+/* 7. Submit Button */
+.submit-btn {
+    background: #d60000;
+    color: white;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    box-shadow: 0 5px 15px rgba(214, 0, 0, 0.4);
+}
+
+    .submit-btn:hover {
+        background: #ff3b3b;
+        transform: translateY(-2px);
+    }
+
+/* 8. Responsive Design (Mobile) */
+@media screen and (max-width: 768px) {
+    .form-row {
+        flex-direction: column; /* Stack inputs vertically on phones */
+        gap: 20px;
+    }
+
+    .form-footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* .captcha {
+        width: 100%;
+        justify-content: center;
+    } */
+
+    .submit-btn {
+        width: 100%; /* Full width button on mobile */
+    }
+
+    .suggestion-form {
+        padding: 25px;
+    }
+}
+
+
+/* ------------------shows--------------- */
+.program-section-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    ;
+    /* Spacing between sections */
+    margin-bottom: 40px;
+    padding: 40px;
+    /* Card Styling */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0,0,0,0.02);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* ====================
+           4. CATEGORY TITLES 
+           ==================== */
+.category-title {
+    width: 100%;
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* Adjusted spacing inside the card */
+    margin-top: 0;
+    margin-bottom: 30px;
+    /* Red Accent Bar */
+    border-left: 5px solid #d60000;
+    /* background: linear-gradient(90deg, rgba(242, 67, 67, 0.5), transparent); */
+    background: linear-gradient(90deg, #ffdede, #ffffff);
+    padding: 10px 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+/* ====================
+           5. GRID & VIDEO CARDS 
+           ==================== */
+.programs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.program-card {
+    background: #fff;
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Border to separate from white section card */
+    border: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+    .program-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+.video-thumbnail {
+    width: 100%;
+    height: 170px;
+    background: #000;
+}
+
+    .video-thumbnail iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+.program-info {
+    padding: 20px;
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+    .program-info h3 {
+        color: #d60000;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0 0 8px 0;
+    }
+
+    .program-info p {
+        color: #666;
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 0 0 15px 0;
+        flex-grow: 1;
+    }
+
+.watch-btn {
+    background-color: #333;
+    color: white;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+    .watch-btn:hover {
+        background-color: #d60000;
+    }
+
+/*-------------------------special programm-----------------*/
+/* =========================================
+   NEW SPECIAL PROGRAMS STYLES (Zig-Zag Layout)
+   (Does not conflict with Shows/Feed styles)
+   ========================================= */
+
+.events-container {
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Space between big event rows */
+    padding-bottom: 50px;
+    /* Ensure it centers within hero-section */
+    margin: 0 auto;
+}
+
+/* 1. The Row Wrapper (Big Card) */
+.event-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: #ffffff; /* Explicit white background */
+    padding: 30px;
+    border-radius: 20px;
+    /* Distinct shadow to differentiate from feed cards */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    .event-row:hover {
+        transform: translateY(-5px);
+    }
+
+    /* 2. The "Zig-Zag" Class */
+    .event-row.reverse {
+        flex-direction: row-reverse; /* Flips content: Text Left, Video Right */
+    }
+
+/* 3. The Video Container */
+.event-media {
+    flex: 1; /* Takes 50% width */
+    height: 320px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    background: #000;
+}
+
+    .event-media iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+/* 4. The Text Content */
+.event-details {
+    flex: 1; /* Takes 50% width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .event-details h2 {
+        font-size: 28px;
+        color: #333;
+        margin: 15px 0;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .event-details p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+/* 5. Unique Decorations */
+.date-badge {
+    background-color: #fef1f1; /* Light red tint to match theme */
+    color: #d60000;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(214, 0, 0, 0.1);
+    width: fit-content;
+}
+
+.highlights-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+    .highlights-list li {
+        margin-bottom: 8px;
+        color: #444;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .highlights-list i {
+        color: #d60000;
+        margin-right: 10px;
+    }
+
+/* 6. Responsive for Zig-Zag */
+@media screen and (max-width: 900px) {
+    .event-row,
+    .event-row.reverse {
+        flex-direction: column; /* Stack vertically on tablets/phones */
+        gap: 20px;
+        padding: 20px;
+        width: 95%; /* Prevent overflowing */
+        margin: 0 auto;
+    }
+
+    .event-media {
+        width: 100%;
+        height: 220px; /* Smaller video height on mobile */
+    }
+
+    .event-details {
+        width: 100%;
+        text-align: left;
+    }
+
+        .event-details h2 {
+            font-size: 22px;
+        }
+}
+
+/*---------------------about----------------*/
+/*=================================================================
+    HERO SECTION OF ABOUT US HAVE IN LINE CSS OF MIN-HEIGHT:800PX
+===================================================================*/
+
+
+.about-container {
+    background-color: #fef1f1;
+    padding-left: 20px;
+    padding-right: 20px;
+    position:absolute;
+    inset: 0;
+    margin: 0;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80vw;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.about-top-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    color: #333;
+    text-align: justify;
+}
+
+/* VIDEO + TEXT ROW */
+.about-video-text-row {
+    display: flex;
+    gap: 35px;
+    margin: 40px 0;
+}
+
+/* VIDEO SECTION */
+.about-video video {
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    height: 280px; /* Adjust height here */
+    object-fit: cover; /* Makes video look clean without stretching */
+    border-radius: 10px;
+}
+
+.about-video {
+    flex: 1.3;
+}
+
+/* RIGHT SIDE TEXT (about-desc) */
+.about-desc {
+    flex: 1;
+}
+
+    .about-desc h3 {
+        margin-top: 0;
+        color: #222;
+    }
+
+    .about-desc p {
+        color: #444;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+/* BOTTOM PARAGRAPH */
+.about-bottom-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Responsive mobile layout */
+@media (max-width: 768px) {
+    .about-video-text-row {
+        flex-direction: column;
+    }
+}
