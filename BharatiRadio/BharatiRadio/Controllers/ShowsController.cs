@@ -13,13 +13,5 @@ namespace BharatiRadio.Controllers
         {
             return View();
         }
-        public ActionResult AddShows()
-        {
-            return View();
-        }
-        public ActionResult GetList()
-        {
-            return View();
-        }
     }
 }
