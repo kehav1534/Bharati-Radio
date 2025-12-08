@@ -106,6 +106,7 @@
     <Content Include="Content\Images\background.jpg" />
     <Content Include="Content\Images\bharti_radio_logo.jpg" />
     <Content Include="Content\Images\bvicam.jpg" />
+    <Content Include="Content\Images\logo-bvicam.png" />
     <Content Include="Content\Images\RB_LOGIN_IMAGE.jpg" />
     <Content Include="Content\dashboard.css" />
     <Content Include="Content\Images\radio1.jpeg" />

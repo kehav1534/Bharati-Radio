@@ -1,65 +1,81 @@
 ﻿
 @{
-    ViewBag.Title = "Videos";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<div class="area-body">
-    <div class="form-container">
-        <header class="form-header">
-            <h1>Contact Us</h1>
-        </header>
-        <form class="suggestion-form">
-            <div class="form-row">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Name">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+
+<div class="hero-section">
+    <div class="page-header">
+        <h1>Contact us</h1>
+    </div>
+    <div class="program-section-card">
+        <div class="category-title">📞 Faculty Coordinators</div>
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+                <div class="profile-icon">
+                    <i class="fas fa-user-tie"></i>
                 </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Email Address">
+                <h3>Dr. Sunil Pratap Singh</h3>
+                <p class="role">Head of Department</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-envelope"></i> xyz@bvicam.in</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
                 </div>
             </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <input type="tel" name="contact" placeholder="Contact Number">
+            <div class="contact-card">
+                <div class="profile-icon">
+                    <i class="fas fa-user-graduate"></i>
                 </div>
-                <div class="form-group">
-                    <input type="text" name="location" placeholder="Location">
+                <h3> Dr. Jagriti Basera</h3>
+                <p class="role">Radio bharati head</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-envelope"></i> xyz@bvicam.in</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 99887 76655</p>
                 </div>
             </div>
 
-            <div class="form-group">
-                <input type="text" name="subject" placeholder="Subject">
-            </div>
-
-            <div class="form-group">
-                <textarea name="suggestion" rows="5" placeholder="suggestion for shows"></textarea>
-            </div>
-
-            <div class="form-footer">
-                <button type="submit" class="submit-btn">SUBMIT</button>
-            </div>
-        </form>
-        <br />
-        <section class="visit-section">
-            <header class="form-header">
-                <h1>Visit us</h1>
-            </header>
-            <div class="glass" style="display: flex; gap:15px">
-                <div class="visit-map">
-                    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=77.1000,28.6542,77.1250,28.6750&layer=mapnik" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="contact-card">
+                <div class="profile-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
                 </div>
-                <div class="visit-info" style="color:white">
-                    <div class="visit-title">Address :</div>
-                    <div>
-                        Bharat Vidyapeeth's Institute of Computer Applications and Management (BVICAM)<br>
-                        A-4, Paschim Vihar, Rohtak Road, New Delhi – 110063 (INDIA)<br>
-                        <strong>Tel:</strong> +91-11-25275055<br>
-                        <strong>Fax:</strong> +91-11-25255056<br>
-                        <strong>Mobile:</strong> +91-9212022066<br>
-                    </div>
+                <h3>Dr. Abmooj</h3>
+                <p class="role">Website Management</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-envelope"></i> xyz@bvicam.in</p>
+                    <p><i class="fas fa-phone-alt"></i> 011-23456789</p>
                 </div>
             </div>
-        </section>
+
+        </div>
+    </div>
+
+    <div class="program-section-card">
+        <div class="category-title">📍 Visit Us</div>
+
+        <div class="location-container">
+
+            <div class="address-box">
+                <h2>Bharati Vidyapeeth's<br>Institute of Computer Applications</h2>
+                <p>A-4, Paschim Vihar, Rohtak Road,<br>New Delhi - 110063</p>
+                <p><strong>Nearest Metro:</strong> Paschim Vihar East (Green Line)</p>
+                <button class="watch-btn" onclick="window.open('https://maps.app.goo.gl/e8Jzf9i7dAVhzpmr7')">
+                    Get Directions <i class="fas fa-location-arrow"></i>
+                </button>
+            </div>
+
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14006.143610486326!2d77.11409549999999!3d28.673898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03b29c955555%3A0x1d2f626605e60d26!2sBharati%20Vidyapeeth&#39;s%20Institute%20of%20Computer%20Applications%20and%20Management%20(BVICAM)!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
     </div>
 </div>

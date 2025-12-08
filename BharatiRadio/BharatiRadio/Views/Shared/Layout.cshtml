@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <script src="~/Content/script2.js" defer></script>
     <link href="~/Content/styles2.css" rel="stylesheet">
 
 
@@ -26,42 +26,56 @@
 
     <div class="main-container">
 
-        <div class="area-head">
-            <div class="area-head-col">
-                <img src="~/Content/Images/bharti_radio_logo.jpg" alt="Radio Bharati Logo" id="brand-img">
+
+        <div class="area-head" style="display:grid; height:185px;">
+            <div class="area-head-row" style="display: flex; justify-content: space-between; align-items: center;width:100%">
+                <div class="area-head-col">
+                    <a href="/Home">
+                        <img src="~/Content/Images/bharti_radio_logo.jpg" alt="Radio Bharati Logo" id="brand-img">
+                    </a>
+                </div>
+                <div class="area-head-col">
+                    <h1 style="font-size:40px; color:red;"><b>Bharati Radio</b></h1>
+                </div>
+                <div class="area-head-col">
+                    <a href="/Home">
+                        <img src="~/Content/Images/logo-bvicam.png" alt="Radio Bharati Logo" id="brand-img" style="width:200px;">
+                    </a>
+                </div>
+                <div class="menu-btn">
+                    <button id="m-btn" onclick="openMenu()">
+                        <img width="64" height="64" src="https://img.icons8.com/sf-black/64/FA5252/menu.png" alt="menu" />
+                    </button>
+                </div>
             </div>
-            <div class="area-head-col">
-                <div class="area-head-options">
-                    <a href="/" class="option">HOME</a>
-                    <a href="/about-us" class="option">ABOUT US</a>
-                    <a href="/bulletin" class="option">BULLETIN</a>
-                    <a href="/Home/shows" class="option">SHOWS</a>
-                    <a href="/Home/videos" class="option">VIDEOS</a>
-                    <a href="/Home/podcast" class="option">PODCAST</a>
-                    <a href="/programs" class="option">SPECIAL PROGRAMS</a>
-                    <a href="/contact-us" class="option">CONTACT US</a>
-                    <a href="/feedback" class="option">SUGGESTION</a>
-                    <a href="/Auth/Login" class="option">LOGIN</a>
-                    <div class="menu-btn">
-                        <button id="m-btn" onclick="openMenu()">
-                            <img width="64" height="64" src="https://img.icons8.com/sf-black/64/FA5252/menu.png" alt="menu" />
-                        </button>
+            <div class="area-head-row" style="display: flex; justify-content: space-between; align-items: center;width:100%">
+                <div class="area-head-col">
+                    <div class="area-head-options">
+                        <a href="/" class="option">HOME</a>
+                        <a href="/about-us" class="option">ABOUT US</a>
+                        <a href="/bulletin" class="option">BULLETIN</a>
+                        <a href="/Home/shows" class="option">SHOWS</a>
+                        <a href="/Home/videos" class="option">VIDEOS</a>
+                        <a href="/Home/podcast" class="option">PODCAST</a>
+                        <a href="/programs" class="option">SPECIAL PROGRAMS</a>
+                        <a href="/contact-us" class="option">CONTACT US</a>
+                        <a href="/feedback" class="option">SUGGESTION</a>
+                        <a href="/Auth/Login" class="option">LOGIN</a>
                     </div>
                 </div>
             </div>
-        </div>
-
-        
-            @RenderBody()
-        
-        
-        <div class="area-footer">
-            <div class="footer-block">
-                <h2>A-4, Paschim Vihar, Opp. Paschim Vihar (East) Metro Station, Rohtak Road, New Delhi, Delhi 110063</h2>
             </div>
-        </div>
 
-    </div>
+
+            @RenderBody()
+
+
+            <div class="area-footer">
+                <div class="footer-block">
+                    <h2>A-4, Paschim Vihar, Opp. Paschim Vihar (East) Metro Station, Rohtak Road, New Delhi, Delhi 110063</h2>
+                </div>
+            </div>
+
+        </div>
 </body>
-<script src="~/Content/script2.js"></script>
 </html>
