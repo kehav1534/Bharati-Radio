@@ -1,109 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
-    <title>Document</title>
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+@{
+    ViewBag.Title = "Bulletin";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="hero-section" style="min-height:800px">
+    <div class="about-container">
+        <div class="page-header">
 
-    <link href="styles.css" rel="stylesheet">
+            <h1>ABOUT US</h1>
+        </div>
+        <!-- Whole white box layout -->
+        <div class="about-section">
 
-    <script>
-        function openMenu(){
-            document.querySelector(".sidebar").style.display = "grid";
-        }
-        function closeMenu(){
-            document.querySelector(".sidebar").style.display = "none";
-        }
-        window.onresize = function() {
-            if (window.innerWidth>=1076){
-            document.querySelector(".sidebar").style.display = "none";
-        }
-        };
-    </script>
-   
-</head>
-<body>
-  <div class="sidebar">
-        <button id="m-btn" onclick="closeMenu()">&times; Close</button>
-        <a href="home.html" id="sidebar-element">HOME</a>
-        <a href="#" id="sidebar-element">ABOUT US</a>
-        <a href="#" id="sidebar-element">BULLETIN</a>
-        <a href="shows.html" id="sidebar-element">SHOWS</a>
-        <a href="videos.html" id="sidebar-element">VIDEOS</a>
-        <a href="#" id="sidebar-element">PODCAST</a>
-        <a href="SpecailProgram_rb.html" id="sidebar-element">SPECIAL PROGRAMS</a>
-        <a href="contactus.html" id="sidebar-element">CONTACT US</a>
-        <a href="feedback.html" id="sidebar-element">SUGGESTION</a>
-        <a href="login.html" id="sidebar-element">LOGIN</a>
-    </div>
-    <!-- Header -->
-    <div class="main-container">
-        <!-- Header -->
-        <div class="area-head">
-            <div class="area-head-col">
-                <img src="resources/bharti_radio_logo.jpg" alt="Radio Bharati Logo" id="brand-img">
+            <!-- Top paragraphs -->
+            <div class="about-top-text">
+                <p>
+                    🎙️ Radio Bharati is the exemplary initiative of BVICAM, New Delhi, in the field of broadcasting.
+                    It is packed with passion ❤️, fueled with various programmes prepared by students, and presents a young style that is energetic and classy.
+                </p>
+                <p>
+                    📻 The station blends information, education, and entertainment for youth and has become the destination station for all listeners.
+                </p>
 
+                <p>
+                    ✨ Radio Bharati is a unique blend of immediacy, intimacy, and accessibility that makes it a beloved companion for millions of listeners.
+                </p>
             </div>
-            <div class="area-head-col">
-                <div class="area-head-options">
-                    <a href = "home.html" class="option">HOME</a>
-                    <a href = "" class="option">ABOUT US</a>
-                    <a href = "" class="option">BULLETIN</a>
-                    <a href = "shows.html" class="option">SHOWS</a>
-                    <a href = "videos.html" class="option">VIDEOS</a>
-                    <a href = "" class="option">PODCAST</a>
-                    <a href = "SpecailProgram_rb.html" class="option">SPECIAL PROGRAMS</a>
-                    <a href = "contactus.html" class="option">CONTACT US</a>
-                    <a href = "feedback.html" class="option">SUGGESTION</a>
-                    <a href = "login.html" class="option">LOGIN</a>
-                    <div class="menu-btn">
-                        <button id="m-btn" onclick="openMenu()">
-                            <img width="64" height="64" src="https://img.icons8.com/sf-black/64/FA5252/menu.png" alt="menu"/>
-                        </button>
-                    </div>
+            <!-- VIDEO + TEXT Section -->
+            <div class="about-video-text-row">
+                <div class="about-video">
+                    <iframe src="https://www.youtube.com/embed/c5U8rYIsr-M"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="about-desc">
+                    <h3>🌟Our Vision</h3>
+                    <p>
+                        To inspire youth with meaningful content and create an accessible
+                        digital radio platform.
+                    </p>
+                    <h3>🎯Our Mission</h3>
+                    <p>
+                        To promote knowledge, culture, creativity and entertainment through
+                        high-quality radio programmes.
+                    </p>
+                    <h3>🤝Our Commitment</h3>
+                    <p>
+                        We ensure Radio Bharati remains a vital part of our media landscape
+                        for generations to come.
+                    </p>
                 </div>
             </div>
-        </div>
-        <div class="area-body" >
-            <div class ="form-container">
-                <header class="form-header">
-                    <h1>About Us</h1>
-                </header>
-                <section class="about-section">
-                    <div class="about-video">
-                        <video controls poster="video-thumbnail.jpg">
-                            <source src="your-video.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="about-desc">
-                        <p>
-                            Radio Bharati is the exemplary initiative of BVICAM, New Delhi, in the field of broadcasting. It is packed with passion, fueled with various Programmes prepared by students and presents a young style that is energetic and classy. The station encompasses the combination of information, education and entertainment for youngster and is a destination station for all the listeners.<br>
-                            <br>Radio Bharati is a unique blend of immediacy, intimacy, and accessibility that makes it a beloved companion for millions of listeners. As we look to the future of Radio’s enduring legacy and adaptability, we assure that Radio Bharati will remain & sustain as a vital part of our media landscape for generations to come.
-                        </p>
-                    </div>
-                </section>
-            </div>   
-        </div>
-
-        <!-- Footer -->
-        <div class="area-footer">
-            <div class="footer-block">
-                <h2>A-4, Paschim Vihar, Opp. Paschim Vihar (East) Metro Station, Rohtak Road, New Delhi, Delhi 110063</h2>
+            <!-- Bottom text -->
+            <div class="about-bottom-text">
+                <p>
+                    🎧 At Radio Bharati, we believe in empowering students with real-time skills, creativity, and teamwork.
+                    With modern studio facilities and passionate contributors, we continue to deliver fresh, dynamic content every day.
+                </p>
             </div>
-
-
         </div>
-
-        <!-- <div class="footer-block">
-                <div class="area-footer-col">
-                    <div class="footer-col-item">content1</div>
-                    <div class="footer-col-item">content2</div>
-                    <div class="footer-col-item">content3</div>
-                </div>
-                
-            </div> -->
     </div>
-</body>
-</html>
+</div>
