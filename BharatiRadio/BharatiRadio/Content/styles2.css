@@ -1005,10 +1005,10 @@ textarea {
     color: #333;
     text-transform: uppercase;
     letter-spacing: 1px;
-    /* Adjusted spacing inside the card */
+   
     margin-top: 0;
     margin-bottom: 30px;
-    /* Red Accent Bar */
+   
     border-left: 5px solid #d60000;
     /* background: linear-gradient(90deg, rgba(242, 67, 67, 0.5), transparent); */
     background: linear-gradient(90deg, #ffdede, #ffffff);
