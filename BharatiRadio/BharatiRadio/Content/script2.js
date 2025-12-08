@@ -69,3 +69,16 @@ const container = document.querySelector('.slider-container');
 container.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
 container.addEventListener('mouseleave', startTimer);
 
+
+//Sidebar Menu Handaling
+function openMenu() {
+    document.querySelector(".sidebar").style.display = "grid";
+}
+function closeMenu() {
+    document.querySelector(".sidebar").style.display = "none";
+}
+window.onresize = function () {
+    if (window.innerWidth >= 1076) {
+        document.querySelector(".sidebar").style.display = "none";
+    }
+};
