@@ -53,7 +53,7 @@
             document.getElementById('modal-title').textContent = 'Create New Bulletin';
             document.getElementById('bulletin-content').textContent = "";
             document.getElementById('bulletin-form').reset();
-            document.getElementById('bulletin-form').action = "@Url.Action("NewBulletin", "Admin")";
+            document.getElementById('bulletin-form').action = "@Url.Action('NewBulletin', 'Admin')";
             openModal(bulletinModal);
         });
     }
@@ -83,8 +83,7 @@
                     document.getElementById('bulletin-status').value = res.status || '';
                     document.getElementById('bulletin-tag').value = res.tag || '';
                     document.getElementById('bulletin-content').textContent = res.content || '';
-                    document.getElementById('bulletin-form').action = "@Url.Action("EditBulletin", "Admin")";
-                    document.querySelector('.mark-btn').setAttribute(res.id || '');
+                    document.getElementById('bulletin-form').action = "@Url.Action('EditBulletin', 'Admin')";
 
                     // 👌 Works now because openModal is in scope!
                     openModal(bulletinModal);
