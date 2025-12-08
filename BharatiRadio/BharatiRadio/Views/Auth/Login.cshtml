@@ -7,33 +7,33 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <div class="hero-section">
-<div class="login-body-wrapper">
-    <div class="login-container">
-        <div class="welcome-section">
-            <h1>Welcome Back!</h1>
-            <p>
-                Explore our platform to discover new features, connect with others, and make the most out of your
-                experience. Ready to continue your journey? Feel free to navigate through our site.
-            </p>
-        </div>
-        <div class="form-section">
-            <form action="@Url.Action("Login", "Auth")" method="POST">
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Username" name="UserName" required>
+    <div class="login-body-wrapper">
+        <div class="login-container">
+            <div class="welcome-section">
+                <h1>Welcome Back!</h1>
+                <p>
+                    Explore our platform to discover new features, connect with others, and make the most out of your
+                    experience. Ready to continue your journey? Feel free to navigate through our site.
+                </p>
+            </div>
+            <div class="form-section">
+                <form action="@Url.Action("Login", "Auth")" method="POST">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username" name="UserName" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" name="password" required>
+                    </div>
+                    <div class="btn-field">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+                <div class="login-links">
+                    <a href="#" style="color:white">Forgot Password?</a>
                 </div>
-                <div class="input-group">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" name="password" required>
-                </div>
-                <div class="btn-field">
-                    <button type="submit">Login</button>
-                </div>
-            </form>
-            <div class="login-links">
-                <a href="#" style="color:white">Forgot Password?</a>
             </div>
         </div>
     </div>
- </div>
 </div>
