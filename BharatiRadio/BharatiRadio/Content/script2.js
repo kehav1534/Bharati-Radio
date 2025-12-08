@@ -70,9 +70,13 @@ container.addEventListener('mouseenter', () => clearInterval(autoSlideInterval))
 container.addEventListener('mouseleave', startTimer);
 
 
+<<<<<<< HEAD
 
 //script for hiding side bar
 
+=======
+//Sidebar Menu Handaling
+>>>>>>> main
 function openMenu() {
     document.querySelector(".sidebar").style.display = "grid";
 }
