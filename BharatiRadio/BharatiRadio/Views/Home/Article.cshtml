@@ -1,0 +1,52 @@
+﻿@model BharatiRadio.Models.Bulletin
+
+@{
+    ViewBag.Title = "Notice Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="bulletin-page-container">
+
+    <div class="details-card-wrapper">
+
+        <div class="notice-details-card">
+
+            <div class="details-header">
+                @if (!string.IsNullOrEmpty(Model.tag))
+                {
+                    <span class="notice-tag">@Model.tag</span>
+                }
+                <span class="details-date">
+                    <i class="far fa-calendar-alt"></i>
+                    @Model.created_at.ToString("dd MMM, yyyy")
+                </span>
+            </div>
+
+            <h1 class="details-title">@Model.title</h1>
+
+            <hr class="divider">
+
+            <div class="details-body">
+                <p>@Model.content</p>
+
+                @if (!string.IsNullOrEmpty(Model.link))
+                {
+                    <div class="external-link-box">
+                        <p>Attachment/Link:</p>
+                        <a href="@Model.link" target="_blank">
+                            @Model.link <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                }
+            </div>
+
+            <div class="details-footer">
+                <a href="@Url.Action("Bulletin", "Home")" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Notices
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</div>

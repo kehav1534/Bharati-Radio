@@ -1,9 +1,58 @@
-﻿
+﻿@model IEnumerable<BharatiRadio.Models.Bulletin>
+
 @{
-    ViewBag.Title = "Videos";
+    ViewBag.Title = "Bulletin Board";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<div class="area-body">
-    <h1 style="color:white;">Comming Soon...</h1>
-</div>
+@*<div class="hero-section">*@
+
+    <div class="bulletin-page-container">
+
+        <div class="page-header">
+            <h1>Bulletin</h1>
+        </div>
+
+        <div class="notices-wrapper">
+
+            @if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <div class="notice-card">
+
+                        <div class="notice-date">
+                            <span class="day">@item.created_at.ToString("dd")</span>
+                            <span class="month">@item.created_at.ToString("MMM").ToUpper()</span>
+                        </div>
+
+                        <div class="notice-content">
+
+                            @if (!string.IsNullOrEmpty(item.tag))
+                            {
+                                <span class="notice-tag">@item.tag</span>
+                            }
+
+                            <h3>@item.title</h3>
+
+                            <p>@item.content</p>
+
+                            @if (!string.IsNullOrEmpty(item.link))
+                            {
+                                <a href="@Url.Action("Article", "Home", new { id = item.Id })" class="download-link">
+                                    View Details <i class="fas fa-arrow-right"></i>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p style="text-align: center; color: #666;">No notices found.</p>
+            }
+
+        </div>
+
+    </div>
+@*</div>*@

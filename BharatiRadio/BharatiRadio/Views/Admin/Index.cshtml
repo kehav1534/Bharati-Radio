@@ -474,8 +474,6 @@
                             document.getElementById('bulletin-tag').value = res.tag || '';
                             document.getElementById('bulletin-content').textContent = res.content || '';
                             document.getElementById('bulletin-form').action = "@Url.Action("EditBulletin", "Admin")";
-                            document.querySelector('.mark-btn').setAttribute(res.id || '');
-
                             // 👌 Works now because openModal is in scope!
                             openModal(bulletinModal);
                         })

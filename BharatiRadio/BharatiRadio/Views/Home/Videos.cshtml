@@ -1,78 +1,67 @@
-﻿
+﻿@* 1. CONNECT TO DATA *@
+@model IEnumerable<BharatiRadio.Models.Program>
+
 @{
     ViewBag.Title = "Videos";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<div class="area-body">
-    @*<h1 style="color:white;">Comming Soon...</h1>*@
-    <div class="area-body" style="display:flex;flex-direction: column">
-        <div class="form-container">
-            <div class="form-header">
-                <h1>videos</h1>
-            </div>
-        </div>
-        <div class="video-section-container">
-            <div class="grid-container">
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID1" allowfullscreen></iframe>
-                        <p>लोकसभा चुनाव के दूसरे चरण के लिए अभियान जारी...</p>
-                    </div>
-                </div>
+<style>
+    .video-card {
+        display: none; /* Hidden by default */
+    }
+</style>
 
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe>
-                        <p>पंचतंत्र की कहानियाँ | एपिसोड-33 “गौरैया और बंदर”</p>
-                    </div>
-                </div>
+<div class="hero-section">
 
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID3" allowfullscreen></iframe>
-                        <p>Preparations are in full swing for second phase of Lok Sabha Elections</p>
-                    </div>
-                </div>
+    <div class="page-header">
+        <h1>Videos</h1>
+    </div>
 
-                <!-- Row 2 -->
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID4" allowfullscreen></iframe>
-                        <p>College Days Exclusive program | Radio Bharati</p>
-                    </div>
-                </div>
+    <div class="video-grid">
 
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID5" allowfullscreen></iframe>
-                        <p>लोकसभा चुनाव के दूसरे चरण के लिए प्रचार का आज अंतिम दिन</p>
+        @if (Model != null)
+        {
+            foreach (var video in Model)
+            {
+                <div class="video-card">
+                    <div class="video-frame">
+                        <iframe src="@video.link" title="@video.title" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-content">
+                        <h3>@video.title</h3>
+                        <p>@video.description</p>
                     </div>
                 </div>
-
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID6" allowfullscreen></iframe>
-                        <p>लोकसभा चुनाव के पहले चरण के लिए नामांकन इस महीने की 25 तारीख...</p>
-                    </div>
-                </div>
-
-                <!-- Row 3 -->
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID7" allowfullscreen></iframe>
-                        <p>लोकसभा चुनाव के दूसरे चरण के लिए प्रचार अभियान जोर...</p>
-                    </div>
-                </div>
-
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID8" allowfullscreen></iframe>
-                        <p>पंचतंत्र की कहानियाँ | एपिसोड-32 “मगरमच्छ और बंदर”</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+            }
+        }
+        else
+        {
+            <p style="text-align:center;">No videos found.</p>
+        }
 
     </div>
+
+    <button class="more-btn">Load More</button>
+
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Step A: Show the first 6 videos immediately
+        $(".video-card").slice(0, 6).show();
+
+        // Step B: When button is clicked
+        $(".more-btn").on("click", function (e) {
+            e.preventDefault();
+
+            // Show the next 3 hidden videos
+            $(".video-card:hidden").slice(0, 3).slideDown();
+
+            // If no hidden videos are left, hide the button
+            if ($(".video-card:hidden").length == 0) {
+                $(".more-btn").fadeOut('slow');
+            }
+        });
+    });
+</script>

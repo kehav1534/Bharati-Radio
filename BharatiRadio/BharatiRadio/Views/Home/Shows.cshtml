@@ -12,7 +12,7 @@
     </div>
 
     <div class="program-section-card">
-        <div class="category-title">🎭 Cultural Events</div>
+        <div class="category-title">Akbar Birbal Ki Kahani</div>
         <div class="programs-grid">
             @foreach (var video in Model.Where(p => p.category == "Cultural"))
             {
@@ -23,18 +23,21 @@
                     <div class="program-info">
                         <h3>@video.title</h3>
                         <p>@video.description</p>
-                        <button class="watch-btn">Watch Now</button>
+                        @*<button class="watch-btn">Watch Now</button>*@
                     </div>
                 </div>
             }
+            <a href="https://youtube.com/playlist?list=PLMa4o2xyZE9hsJOFqdqrB5_vCFVZZnIJ5&si=_CR2KfKmLrpk1jOO" class="watch-btn" target="_blank">
+                Watch Playlist <i class="fab fa-youtube"></i>
+            </a>
 
         </div>
     </div>
 
     <div class="program-section-card">
-        <div class="category-title">🎓 Academic Highlights</div>
+        <div class="category-title">Panchtantra ki kahaniyan</div>
         <div class="programs-grid">
-            @foreach (var video in Model.Where(p => p.category == "Academic"))
+            @foreach (var video in Model.Where(p => p.category == "kids"))
             {
                 <div class="program-card">
                     <div class="video-thumbnail">
@@ -43,17 +46,20 @@
                     <div class="program-info">
                         <h3>@video.title</h3>
                         <p>@video.description</p>
-                        <button class="watch-btn">Watch Now</button>
+                        @*<button class="watch-btn">Watch Now</button>*@
                     </div>
                 </div>
             }
+            <a href="https://youtube.com/playlist?list=PLMa4o2xyZE9hfl8eCaT_0pv_mUkv8k3O4&si=xlM5Pc9UeiDTcA7f" class="watch-btn" target="_blank">
+                Watch Playlist <i class="fab fa-youtube"></i>
+            </a>
         </div>
     </div>
 
     <div class="program-section-card">
-        <div class="category-title">🏆 Sports & Action</div>
+        <div class="category-title">दिल से दिल्ली</div>
         <div class="programs-grid">
-            @foreach (var video in Model.Where(p => p.category == "Sports"))
+            @foreach (var video in Model.Where(p => p.category == "journalism"))
             {
                 <div class="program-card">
                     <div class="video-thumbnail">
@@ -62,11 +68,15 @@
                     <div class="program-info">
                         <h3>@video.title</h3>
                         <p>@video.description</p>
-                        <button class="watch-btn">Watch Now</button>
+                        @*<button class="watch-btn">Watch Now</button>*@
                     </div>
                 </div>
             }
+            <a href="https://youtube.com/playlist?list=PLMa4o2xyZE9gGVwsiQnvxCyERRXylvSxd&si=2sx6XMGwTpIylfSR" class="watch-btn" target="_blank">
+                Watch Playlist <i class="fab fa-youtube"></i>
+            </a>
         </div>
+       
     </div>
 
 </div>
