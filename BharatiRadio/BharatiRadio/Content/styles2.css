@@ -706,7 +706,7 @@ button:hover {
         }
 
 .login-body-wrapper {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+/*    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);*/
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -1312,13 +1312,13 @@ textarea {
 
 /* --- BULLETIN BOARD PAGE --- */
 .bulletin-page-container {
-    background-color: var(--bg-pink);
+    background-color: rgb(240 240 240);
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    max-width: 1400px;
     box-sizing: border-box;
     margin: 0;
     padding-bottom: 50px;
@@ -1359,6 +1359,7 @@ textarea {
     color: white;
     width: 85px;
     min-width: 85px;
+    max-width: 85vw;
     display: flex;
     flex-direction: column;
     justify-content: center;

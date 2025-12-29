@@ -158,6 +158,7 @@
     <Content Include="Views\Home\Shows.cshtml" />
     <Content Include="Views\Home\Podcast.cshtml" />
     <Content Include="Views\Home\Article.cshtml" />
+    <Content Include="Views\Shared\__Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

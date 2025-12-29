@@ -3,7 +3,7 @@
 
 @{
     ViewBag.Title = "Videos";
-    Layout = "~/Views/Shared/Layout.cshtml";
+    Layout = "~/Views/Shared/__Layout.cshtml";
 }
 
 <style>
@@ -12,7 +12,8 @@
     }
 </style>
 
-<div class="hero-section">
+
+
 
     <div class="page-header">
         <h1>Videos</h1>
@@ -44,24 +45,23 @@
 
     <button class="more-btn">Load More</button>
 
-</div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function () {
-        // Step A: Show the first 6 videos immediately
-        $(".video-card").slice(0, 6).show();
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Step A: Show the first 6 videos immediately
+            $(".video-card").slice(0, 6).show();
 
-        // Step B: When button is clicked
-        $(".more-btn").on("click", function (e) {
-            e.preventDefault();
+            // Step B: When button is clicked
+            $(".more-btn").on("click", function (e) {
+                e.preventDefault();
 
-            // Show the next 3 hidden videos
-            $(".video-card:hidden").slice(0, 3).slideDown();
+                // Show the next 3 hidden videos
+                $(".video-card:hidden").slice(0, 3).slideDown();
 
-            // If no hidden videos are left, hide the button
-            if ($(".video-card:hidden").length == 0) {
-                $(".more-btn").fadeOut('slow');
-            }
+                // If no hidden videos are left, hide the button
+                if ($(".video-card:hidden").length == 0) {
+                    $(".more-btn").fadeOut('slow');
+                }
+            });
         });
-    });
-</script>
+    </script>
