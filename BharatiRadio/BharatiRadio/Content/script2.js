@@ -1,4 +1,3 @@
-
 const slides = document.querySelectorAll('.slides-wrapper img');
 const wrapper = document.getElementById('slides');
 const dotsContainer = document.getElementById('dots');
@@ -84,6 +83,8 @@ window.onresize = function () {
         document.querySelector(".sidebar").style.display = "none";
     }
 };
+
+
 
 
 

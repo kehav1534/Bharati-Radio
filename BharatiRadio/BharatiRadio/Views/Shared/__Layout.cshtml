@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - Bharati Radio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="~/css/site.css" />
+   
+    <script src="~/Content/script2.js" defer></script>
+    <link href="~/Content/styles.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-top">
+            <div class="logo-left">
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="~/Content/Images/bharti_radio_logo.jpg" alt="Bharati Radio Logo">
+                </a>
+            </div>
+
+            <div class="site-title">
+                <h1>Bharati Radio</h1>
+            </div>
+
+            <div class="logo-right">
+                <img src="~/Content/Images/logo-bvicam.png" alt="BVICAM Logo">
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="navbar-container">
+                <ul class="nav-menu">
+                    <li><a href="@Url.Action("Home", "Home")" class="nav-link">HOME</a></li>
+                    <li><a href="@Url.Action("AboutUs", "Home")" class="nav-link">ABOUT US</a></li>
+                    <li><a href="@Url.Action("Bulletin", "Home")" class="nav-link">BULLETIN</a></li>
+                    <li><a href="@Url.Action("Shows", "Home")" class="nav-link">SHOWS</a></li>
+                    <li><a href="@Url.Action("Videos", "Home")" class="nav-link">VIDEOS</a></li>
+                    <li><a href="@Url.Action("Podcast", "Home")" class="nav-link">PODCAST</a></li>
+                    <li><a href="@Url.Action("Programs", "Home")" class="nav-link">SPECIAL PROGRAMS</a></li>
+                    <li><a href="@Url.Action("ContactUs", "Home")" class="nav-link">CONTACT US</a></li>
+                    <li><a href="@Url.Action("feedback", "Feedback")" class="nav-link">SUGGESTION</a></li>
+                    <li><a href="@Url.Action("Login", "Auth")" class="nav-link">LOGIN</a></li>
+                </ul>
+
+                <div class="hamburger" id="hamburger-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" id="close-btn">&times;</div>
+        <ul class="sidebar-menu">
+            <li><a href="@Url.Action("Home", "Home")" class="sidebar-link">HOME</a></li>
+            <li><a href="@Url.Action("AboutUs", "Home")" class="sidebar-link">ABOUT US</a></li>
+            <li><a href="@Url.Action("Bulletin", "Home")" class="sidebar-link">BULLETIN</a></li>
+            <li><a href="@Url.Action("Shows", "Home")" class="sidebar-link">SHOWS</a></li>
+            <li><a href="@Url.Action("Videos", "Home")" class="sidebar-link">VIDEOS</a></li>
+            <li><a href="@Url.Action("Podcast", "Home")" class="sidebar-link">PODCAST</a></li>
+            <li><a href="@Url.Action("Programs", "Home")" class="sidebar-link">SPECIAL PROGRAMS</a></li>
+            <li><a href="@Url.Action("ContactUs", "Home")" class="sidebar-link">CONTACT US</a></li>
+            <li><a href="@Url.Action("feedback", "Feedback")" class="sidebar-link">SUGGESTION</a></li>
+            <li><a href="@Url.Action("Login", "Auth")" class="sidebar-link">LOGIN</a></li>
+        </ul>
+    </div>
+
+    <main class="bulletin-page-container">
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>A-4, Paschim Vihar, Opp. Paschim Vihar (East) Metro Station, Rohtak Road, New Delhi, Delhi 110063</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const sidebar = document.getElementById('sidebar');
+
+            // Function to open sidebar
+            hamburgerBtn.addEventListener('click', function () {
+                sidebar.classList.add('active');
+            });
+
+            // Function to close sidebar
+            closeBtn.addEventListener('click', function () {
+                sidebar.classList.remove('active');
+            });
+
+            // Optional: Close sidebar when clicking outside of it
+            document.addEventListener('click', function (event) {
+                if (!sidebar.contains(event.target) && !hamburgerBtn.contains(event.target) && sidebar.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
