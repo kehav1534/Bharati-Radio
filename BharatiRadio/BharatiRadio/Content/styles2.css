@@ -1,38 +1,50 @@
-﻿/*-----------------navbar and footer-------------*/
+﻿/* ============================================================
+   1. CONTROL CENTER (:root)
+   ============================================================ */
+:root {
+    /* --- FONTS --- */
+    --main-font: 'Gothic A1', sans-serif;
+    /* --- TEXT SIZES --- */
+    --h1-size: 24px;
+    --h2-size: 22px;
+    --h3-size: 18px;
+    --p-size: 16px;
+    --link-size: 14px;
+    /* --- COLORS --- */
+    --primary-red: #d60000;
+    --primary-gradient: linear-gradient(90deg, #d60000, #ff4b4b);
+    --bg-pink: #fef1f1;
+    --bg-light: #ffffff;
+    --text-dark: #333;
+    --text-grey: #555;
+    --text-light-grey: #666;
+    
+}
+
+/*-----------------navbar and footer-------------*/
 html, body {
     height: 100%;
     padding: 0;
     margin: 0;
     min-height: 100vh;
-    color: var(--text-light);
-    background-image: url('../Images/background.jpg'); /* Check your path! */
+    color: var(--text-dark); /* Variable */
+    background-image: url('../Images/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* CRITICAL FIX: Starts from top */
+    justify-content: flex-start;
     align-items: center;
-    font-family: 'Gothic A1', Helvetica, Arial, Lucida, sans-serif;
+    font-family: var(--main-font); /* Variable */
 }
-
-
-
-/* This pushes the footer to the bottom if content is short */
-/*.content-wrapper {
-    flex: 1;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}*/
 
 /* =========================
    3. NAVIGATION BAR (HEADER)
-   ========================= */
+   ========================================= */
 .area-head {
-    background-color: var(--bg-light);
-    border-bottom: 4px solid red;
+    background-color: var(--bg-light); /* Variable */
+    border-bottom: 4px solid var(--primary-red); /* Variable */
     border-radius: 0 0 15px 15px;
     padding: 15px 20px;
     display: flex;
@@ -42,16 +54,10 @@ html, body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px; /* Fixed height is important for the spacing calculation */
-    background-color: #ffffff;
-    border-bottom: 5px solid #ff3b3b; /* Bright Red Line */
-    border-radius: 0 0 25px 25px; /* Rounded bottom corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px; /* Side spacing */
-    z-index: 1000; /* High number ensures it sits ON TOP of everything */
+    height: 100px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 0 40px;
+    z-index: 1000;
     box-sizing: border-box;
 }
 
@@ -84,6 +90,7 @@ html, body {
     text-shadow: 0em 0.1em 0.1em rgba(0, 0, 0, 0.4);
     text-decoration: none;
     transition: 0.5s;
+    font-family: var(--main-font); /* Variable */
 }
 
     .option:hover {
@@ -93,7 +100,7 @@ html, body {
 
 /* Mobile Menu Button */
 .menu-btn {
-    display: none; /* Hidden by default on desktop */
+    display: none;
 }
 
 #m-btn {
@@ -104,10 +111,10 @@ html, body {
 
 /* =========================
    4. SIDEBAR (MOBILE MENU)
-   ========================= */
+   ========================================= */
 .sidebar {
     display: none;
-    z-index: 10;
+    z-index: 1001; /* Fixed Z-Index */
     right: 0;
     top: 0;
     position: fixed;
@@ -115,6 +122,7 @@ html, body {
     height: 100vh;
     border-left: 1px solid #ddd;
     box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto; /* Fixed scroll */
 }
 
 #sidebar-element {
@@ -125,6 +133,7 @@ html, body {
     text-decoration: none;
     font-weight: bold;
     border-bottom: 1px solid #eee;
+    font-family: var(--main-font); /* Variable */
 }
 
     #sidebar-element:hover {
@@ -134,11 +143,10 @@ html, body {
 
 /* =========================
    5. FOOTER
-   ========================= */
+   ========================================= */
 .area-footer {
     width: 100%;
     margin-top: auto;
-    /* Check that your background color is visible */
     background-color: brown;
     color: white;
 }
@@ -149,19 +157,19 @@ html, body {
     justify-content: center;
     align-items: center;
     padding: 15px 20px;
-    margin-top: auto; /* Ensures it sits at bottom of flex container */
+    margin-top: auto;
 }
 
     .footer-block h2 {
         font-size: 16px;
         text-align: center;
         margin: 0;
+        font-family: var(--main-font);
     }
 
 /* =========================
    6. RESPONSIVE QUERIES
-   ========================= */
-/* Tablet/Mobile: Hide top links, Show Menu Button */
+   ========================================= */
 @media screen and (max-width: 1075px) {
     .option {
         display: none;
@@ -172,14 +180,12 @@ html, body {
     }
 }
 
-/* Desktop: Hide Menu Button */
 @media (min-width: 1076px) {
     .menu-btn {
         display: none;
     }
 }
 
-/* Large Screens: Adjust Header Layout */
 @media screen and (min-width: 1076px) and (max-width: 1384px) {
     .area-head-col {
         width: 100%;
@@ -201,13 +207,9 @@ html, body {
 }
 
 /* ------------------Landing page-------------- */
-
-/* currently home-page container and hero section have same css */
-
 .home-page-container {
     margin: 0;
     padding-bottom: 50px;
-    /*    min-height: 100vh;*/
     display: flex;
     flex-direction: column;
     justify-self: center;
@@ -219,10 +221,8 @@ html, body {
 }
 
 .hero-section {
-    position: relative;
     margin: 0;
     padding-bottom: 50px;
-/*     min-height: 900px; */
     display: flex;
     flex-direction: column;
     justify-self: center;
@@ -236,9 +236,8 @@ html, body {
 .container1 {
     width: 96%;
     display: flex;
-    /*    margin-top: 0;*/
     margin: auto;
-    gap:30px;
+    gap: 30px;
     text-align: center;
     padding: 20px;
     border: 1px solid #ccc;
@@ -252,23 +251,25 @@ html, body {
     width: 700px;
     margin-right: 20px;
 }
-/* ------------------Bulletin Board Styles-------------- */
+
+/* ------------------Bulletin Board Styles (Widget)-------------- */
 .bulletin-board {
     width: 30%;
     background-color: #ffffff;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     border-radius: 12px;
     overflow: hidden;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: var(--main-font); /*'Segoe UI', sans-serif;*/
 }
 
 .bulletin-header {
-    background: linear-gradient(135deg, #ff4b4b, #d60000);
+    background: var(--primary-gradient); /* Variable */
     color: white;
     padding: 15px;
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+    font-size: var(--h3-size);
     letter-spacing: 1px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     position: relative;
@@ -288,7 +289,7 @@ html, body {
     display: block;
     margin: 10px 15px;
     border-radius: 6px;
-    border-left: 5px solid #d60000;
+    border-left: 5px solid var(--primary-red); /* Variable */
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     color: #444;
     font-size: 14px;
@@ -297,7 +298,7 @@ html, body {
 }
 
     .bulletin-item:hover {
-        transform: scale(1.02); /* Grows slightly */
+        transform: scale(1.02);
         box-shadow: 0 5px 15px rgba(214, 0, 0, 0.2);
         background-color: #fffdfd;
     }
@@ -339,7 +340,6 @@ html, body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* 3. THE SLIDES STRIP */
 .slides-wrapper {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -350,7 +350,7 @@ html, body {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        flex-shrink: 0; /* Prevents images from squishing */
+        flex-shrink: 0;
     }
 
 .nav-btn {
@@ -409,14 +409,7 @@ html, body {
         transform: scale(1.2);
     }
 
-
-
-
-
-
-
 @keyframes slideshow {
-
     0% {
         margin-left: 0;
     }
@@ -424,7 +417,6 @@ html, body {
     20% {
         margin-left: 0;
     }
-
 
     25% {
         margin-left: -100%;
@@ -434,7 +426,6 @@ html, body {
         margin-left: -100%;
     }
 
-
     50% {
         margin-left: -200%;
     }
@@ -442,7 +433,6 @@ html, body {
     70% {
         margin-left: -200%;
     }
-
 
     75% {
         margin-left: -300%;
@@ -452,43 +442,37 @@ html, body {
         margin-left: -300%;
     }
 
-
     100% {
         margin-left: 0;
     }
 }
 
-/* RESPONSIVE LAYOUT FIX */
+/* RESPONSIVE LAYOUT FIX (FIXED THE SLASH ERROR) */
 @media screen and (max-width: 1100px) {
-
-    /* 1. Stack the items vertically */
     .container1 {
         flex-direction: column;
         align-items: center;
-        gap: 30px;
-        /
+        gap: 40px; /* Added spacing */
+        margin-top: 20px;
     }
 
-
-    .slider-container {
+    .slider-container, .bulletin-board {
         width: 100%;
-        max-width: 100%;
+        max-width: 600px; /* Fixed width */
         height: auto;
-        aspect-ratio: 16/9;
     }
 
-
-    .bulletin-board {
-        width: 90%;
-        max-width: 400px;
+    .video-card {
+        width: 100%;
     }
 }
+
 /* ---------------------conatiner2-------------------- */
 .container2 {
     width: 100%;
     min-height: 450px;
     margin: 40px auto;
-    background-color: #fef1f1;
+    background-color: var(--bg-pink); /* Variable */
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     display: flex;
@@ -499,35 +483,30 @@ html, body {
 }
 
 .section-title {
-    /* Similar Red Gradient style, but independent code */
-    background: linear-gradient(90deg, #d60000, #ff4b4b);
+    background: var(--primary-gradient); /* Variable */
     color: white;
     padding: 15px;
     text-align: center;
-    font-size: 20px;
+    font-size: var(--h2-size);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
-    width: 100%; /* Fills the top bar */
+    width: 100%;
 }
 
-/* 3. The Grid */
 .video-grid {
     display: flex;
-    justify-content: center; /* Centers items */
+    justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap; /* KEY: Allows cards to drop to next line */
-    gap: 30px; /* Space between cards */
+    flex-wrap: wrap;
+    gap: 30px;
     padding: 30px;
 }
 
-/* 4. Compact Card Styling */
 .video-card {
     background: white;
-    /* Desktop: 30% width allows 3 to fit side-by-side */
     width: 30%;
-    min-width: 280px; /* Never get smaller than this */
-
+    min-width: 280px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -555,24 +534,21 @@ html, body {
 
 @media screen and (max-width: 1000px) {
     .video-card {
-        /* Tablet: 45% width allows 2 cards per row */
         width: 45%;
     }
 }
 
-/* Mobile View (Screens smaller than 700px) */
 @media screen and (max-width: 700px) {
     .container2 {
-        width: 95%; /* Use full screen width */
-        padding: 0; /* Remove extra side padding */
+        width: 95%;
+        padding: 0;
     }
 
     .video-grid {
-        padding: 20px; /* Smaller padding inside */
+        padding: 20px;
     }
 
     .video-card {
-        /* Mobile: 100% width makes them stack 1 big card per row */
         width: 100%;
     }
 }
@@ -582,16 +558,17 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
 
     .card-content h3 {
         margin: 0;
-        font-size: 16px;
-        color: #333;
+        font-size: var(--h3-size);
+        color: var(--text-dark);
     }
 
 .more-btn {
-    background-color: #333; /* Dark button for contrast */
+    background-color: #333;
     color: white;
     width: auto;
     justify-self: center;
@@ -606,36 +583,29 @@ html, body {
     white-space: nowrap;
 }
 
-
     .more-btn:hover {
-        background-color: #d60000;
+        background-color: var(--primary-red);
     }
 
-/* ------------------End of Landing page-------------- */
-
-
 /*----------------------login-----------------------------*/
-/* Login Specific Styles */
 .login-container {
     display: flex;
     width: 900px;
     max-width: 95%;
     height: 450px;
     margin: auto;
-    /* The Glass Effect */
     background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px); /* Blurs the background behind the card */
+    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    overflow: hidden; /* Keeps child elements inside rounded corners */
+    overflow: hidden;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
-/* 3. Left Side: Welcome Section */
 .welcome-section {
-    flex: 1; /* Takes 50% width */
-    background: linear-gradient(135deg, #d60000, #ff4b4b); /* Red Gradient */
+    flex: 1;
+    background: linear-gradient(135deg, #d60000, #ff4b4b);
     color: white;
     padding: 50px;
     display: flex;
@@ -646,7 +616,7 @@ html, body {
 }
 
     .welcome-section h1 {
-        font-size: 36px;
+        font-size: var(--h1-size);
         font-weight: 700;
         margin-bottom: 20px;
         text-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -658,23 +628,21 @@ html, body {
         opacity: 0.9;
     }
 
-/* 4. Right Side: Form Section */
 .form-section {
-    flex: 1; /* Takes 50% width */
+    flex: 1;
     padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.2); /* Slightly darker area for inputs */
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* 5. Input Fields Styling */
 .input-group {
     background: #f0f2f5;
     position: relative;
     margin-bottom: 20px;
     width: 100%;
-    border-radius: 30px; /* Pill shape */
+    border-radius: 30px;
 }
 
     .input-group i {
@@ -688,22 +656,19 @@ html, body {
 
     .input-group input {
         width: 100%;
-        padding: 15px 15px 15px 45px; /* Extra padding on left for the icon */
+        padding: 15px 15px 15px 45px;
         background: rgba(255, 255, 255, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 30px; /* Pill shape */
-        /* color: white; */
+        border-radius: 30px;
         font-size: 16px;
         outline: none;
         transition: 0.3s;
-        /* Fix for browser placeholder spacing */
         box-sizing: border-box;
     }
 
-        /* Glow effect when clicking inside */
         .input-group input:focus {
             background: rgba(255, 255, 255, 0.2);
-            border-color: #d60000;
+            border-color: var(--primary-red);
             box-shadow: 0 0 10px rgba(214, 0, 0, 0.3);
         }
 
@@ -711,7 +676,6 @@ html, body {
             color: #bbb;
         }
 
-/* 6. Button Styling */
 .btn-field {
     width: 100%;
     margin-top: 10px;
@@ -723,7 +687,6 @@ button:hover {
     box-shadow: 0 5px 15px rgba(214, 0, 0, 0.4);
 }
 
-/* 7. Forgot Password Link */
 .login-links {
     margin-top: 20px;
     text-align: center;
@@ -744,7 +707,7 @@ button:hover {
 
 .login-body-wrapper {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    min-height: 100vh; /* changed from height to min-height */
+    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -754,7 +717,7 @@ button:hover {
 .login-container button {
     width: 100%;
     padding: 15px;
-    background: #d60000;
+    background: var(--primary-red);
     color: white;
     border: none;
     border-radius: 30px;
@@ -770,10 +733,10 @@ button:hover {
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(214, 0, 0, 0.4);
     }
-/* 8. Mobile Responsiveness */
+
 @media screen and (max-width: 768px) {
     .login-container {
-        flex-direction: column; /* Stack top to bottom */
+        flex-direction: column;
         height: auto;
     }
 
@@ -788,38 +751,27 @@ button:hover {
 }
 
 /* --------------------feedback------------------ */
-
 .feedback-body-wrapper {
     min-height: 100vh;
     width: 100%;
-    /* Dark Red Gradient Background (Matches Login Page) */
-    /* background: linear-gradient(135deg, #1e1e1e, #5a0000); */
-    /* background-color: #f0f2f5; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px; /* Padding for mobile screens */
+    padding: 40px 20px;
     box-sizing: border-box;
 }
 
-/* 2. Page Header (Sleek & Modern) */
 .page-header {
-    /* Your Theme: 90deg Gradient */
-    background: linear-gradient(90deg, #d60000, #ff4b4b);
-    /* WIDTH: Wide but controlled */
+    background: var(--primary-gradient); /* Variable */
     width: 95%;
     max-width: 1100px;
-    /* SPACING */
     margin-top: 10px;
     margin-bottom: 30px;
     padding: 12px 0;
-    /* SHAPE: Sharp but smooth corners */
     border-radius: 8px;
-    /* SLEEK EDGES: Thin, crisp lines */
     border-top: 1px solid rgba(255, 255, 255, 0.4);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    /* GLOW: Tighter, less blurry shadow */
     box-shadow: 0 8px 20px rgba(214, 0, 0, 0.3);
     text-align: center;
     position: relative;
@@ -827,84 +779,68 @@ button:hover {
 
     .page-header h1 {
         color: white;
-        font-size: 24px; /* Slightly smaller font looks more elegant */
+        font-size: var(--h1-size);
         font-weight: 700;
         text-transform: uppercase;
-        /* WIDE SPACING = SLEEK LOOK */
         letter-spacing: 4px;
         margin: 0;
-        /* Subtle text shadow */
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     }
 
-/* 3. The Glass Form Card */
 .suggestion-form {
     width: 100%;
-    max-width: 700px; /* Limits width on big screens */
-    /* background: rgba(255, 255, 255, 0.05); */
+    max-width: 700px;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    /* border: 1px solid rgba(255, 255, 255, 0.1); */
-    /* padding: 40px; */
-    /* border-radius: 20px; */
-    /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5); */
     box-sizing: border-box;
-    /* Red-Tinted Glass */
-    /* background: rgba(100, 0, 0, 0.4);  */
-    background-color: #fef1f1;
+    background-color: var(--bg-pink); /* Variable */
     border-radius: 20px;
     padding: 40px;
-    border: 1px solid rgba(255, 100, 100, 0.2); /* Reddish border */
+    border: 1px solid rgba(255, 100, 100, 0.2);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
-/* 4. Form Layout (Rows & Groups) */
 .form-row {
     display: flex;
-    gap: 20px; /* Space between side-by-side inputs */
+    gap: 20px;
     margin-bottom: 20px;
 }
 
 .form-group {
-    flex: 1; /* Makes inputs grow to fill space */
+    flex: 1;
     width: 100%;
-    margin-bottom: 20px; /* Space below single inputs */
+    margin-bottom: 20px;
 }
 
-/* Remove bottom margin for groups inside a row to avoid double spacing */
 .form-row .form-group {
     margin-bottom: 0;
 }
 
-/* 5. Input Fields & Textarea */
 input, textarea {
     width: 100%;
     padding: 15px 20px;
     background: #ffffff;
     border: 2px solid #ddd;
-    border-radius: 30px; /* Pill Shape */
+    border-radius: 30px;
     font-size: 15px;
     color: #333;
     outline: none;
     box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
     transition: 0.3s;
-    box-sizing: border-box; /* Prevents padding from breaking layout */
+    box-sizing: border-box;
 }
 
-/* Specific style for Textarea (Message box) */
 textarea {
-    border-radius: 20px; /* Slightly less rounded for the big box */
-    resize: vertical; /* Allows resizing only vertically */
-    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    resize: vertical;
+    font-family: var(--main-font); /*'Poppins', sans-serif;*/
 }
 
-    /* Input Focus State */
     input:focus, textarea:focus {
         background: #fff;
-        box-shadow: 0 0 0 3px rgba(214, 0, 0, 0.3); /* Red Glow */
+        box-shadow: 0 0 0 3px rgba(214, 0, 0, 0.3);
     }
 
-/* 6. Footer Area (Captcha & Button) */
 .form-footer {
     display: flex;
     justify-content: space-between;
@@ -914,26 +850,8 @@ textarea {
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Captcha Styling */
-/* .captcha {
-    display: flex;
-    align-items: center;
-    color: white;
-    font-weight: 600;
-    font-size: 18px;
-}
-
-.captcha-input {
-    width: 60px;
-    padding: 8px;
-    margin-left: 15px;
-    text-align: center;
-    border-radius: 8px; 
-} */
-
-/* 7. Submit Button */
 .submit-btn {
-    background: #d60000;
+    background: var(--primary-red);
     color: white;
     padding: 12px 35px;
     border: none;
@@ -950,10 +868,9 @@ textarea {
         transform: translateY(-2px);
     }
 
-/* 8. Responsive Design (Mobile) */
 @media screen and (max-width: 768px) {
     .form-row {
-        flex-direction: column; /* Stack inputs vertically on phones */
+        flex-direction: column;
         gap: 20px;
     }
 
@@ -962,13 +879,8 @@ textarea {
         gap: 20px;
     }
 
-    /* .captcha {
-        width: 100%;
-        justify-content: center;
-    } */
-
     .submit-btn {
-        width: 100%; /* Full width button on mobile */
+        width: 100%;
     }
 
     .suggestion-form {
@@ -976,18 +888,13 @@ textarea {
     }
 }
 
-
 /* ------------------shows--------------- */
 .program-section-card {
     background: #ffffff;
     width: 100%;
     max-width: 1200px;
-    background-color: #ffffff;
-    ;
-    /* Spacing between sections */
     margin-bottom: 40px;
     padding: 40px;
-    /* Card Styling */
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0,0,0,0.02);
@@ -995,30 +902,21 @@ textarea {
     box-sizing: border-box;
 }
 
-/* ====================
-           4. CATEGORY TITLES 
-           ==================== */
 .category-title {
     width: 100%;
-    font-size: 22px;
+    font-size: var(--h2-size);
     font-weight: 700;
     color: #333;
     text-transform: uppercase;
     letter-spacing: 1px;
-   
     margin-top: 0;
     margin-bottom: 30px;
-   
-    border-left: 5px solid #d60000;
-    /* background: linear-gradient(90deg, rgba(242, 67, 67, 0.5), transparent); */
+    border-left: 5px solid var(--primary-red);
     background: linear-gradient(90deg, #ffdede, #ffffff);
     padding: 10px 20px;
     border-radius: 0 10px 10px 0;
 }
 
-/* ====================
-           5. GRID & VIDEO CARDS 
-           ==================== */
 .programs-grid {
     display: flex;
     flex-wrap: wrap;
@@ -1031,7 +929,6 @@ textarea {
     width: 300px;
     border-radius: 12px;
     overflow: hidden;
-    /* Border to separate from white section card */
     border: 1px solid #eee;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1065,15 +962,15 @@ textarea {
 }
 
     .program-info h3 {
-        color: #d60000;
-        font-size: 18px;
+        color: var(--primary-red);
+        font-size: var(--h3-size);
         font-weight: 700;
         margin: 0 0 8px 0;
     }
 
     .program-info p {
         color: #666;
-        font-size: 13px;
+        font-size: var(--p-size);
         line-height: 1.5;
         margin: 0 0 15px 0;
         flex-grow: 1;
@@ -1096,35 +993,27 @@ textarea {
 }
 
     .watch-btn:hover {
-        background-color: #d60000;
+        background-color: var(--primary-red);
     }
 
 /*-------------------------special programm-----------------*/
-/* =========================================
-   NEW SPECIAL PROGRAMS STYLES (Zig-Zag Layout)
-   (Does not conflict with Shows/Feed styles)
-   ========================================= */
-
 .events-container {
     width: 95%;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    gap: 60px; /* Space between big event rows */
+    gap: 60px;
     padding-bottom: 50px;
-    /* Ensure it centers within hero-section */
     margin: 0 auto;
 }
 
-/* 1. The Row Wrapper (Big Card) */
 .event-row {
     display: flex;
     align-items: center;
     gap: 40px;
-    background: #ffffff; /* Explicit white background */
+    background: #ffffff;
     padding: 30px;
     border-radius: 20px;
-    /* Distinct shadow to differentiate from feed cards */
     box-shadow: 0 20px 50px rgba(0,0,0,0.08);
     transition: transform 0.3s;
     width: 100%;
@@ -1135,14 +1024,12 @@ textarea {
         transform: translateY(-5px);
     }
 
-    /* 2. The "Zig-Zag" Class */
     .event-row.reverse {
-        flex-direction: row-reverse; /* Flips content: Text Left, Video Right */
+        flex-direction: row-reverse;
     }
 
-/* 3. The Video Container */
 .event-media {
-    flex: 1; /* Takes 50% width */
+    flex: 1;
     height: 320px;
     border-radius: 15px;
     overflow: hidden;
@@ -1156,16 +1043,15 @@ textarea {
         border: none;
     }
 
-/* 4. The Text Content */
 .event-details {
-    flex: 1; /* Takes 50% width */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
     .event-details h2 {
-        font-size: 28px;
+        font-size: var(--h2-size);
         color: #333;
         margin: 15px 0;
         font-weight: 800;
@@ -1173,16 +1059,15 @@ textarea {
     }
 
     .event-details p {
-        font-size: 15px;
+        font-size: var(--p-size);
         line-height: 1.6;
         color: #555;
         margin-bottom: 20px;
     }
 
-/* 5. Unique Decorations */
 .date-badge {
-    background-color: #fef1f1; /* Light red tint to match theme */
-    color: #d60000;
+    background-color: var(--bg-pink);
+    color: var(--primary-red);
     font-weight: 700;
     font-size: 12px;
     padding: 6px 12px;
@@ -1205,24 +1090,22 @@ textarea {
     }
 
     .highlights-list i {
-        color: #d60000;
+        color: var(--primary-red);
         margin-right: 10px;
     }
 
-/* 6. Responsive for Zig-Zag */
 @media screen and (max-width: 900px) {
-    .event-row,
-    .event-row.reverse {
-        flex-direction: column; /* Stack vertically on tablets/phones */
+    .event-row, .event-row.reverse {
+        flex-direction: column;
         gap: 20px;
         padding: 20px;
-        width: 95%; /* Prevent overflowing */
+        width: 95%;
         margin: 0 auto;
     }
 
     .event-media {
         width: 100%;
-        height: 220px; /* Smaller video height on mobile */
+        height: 220px;
     }
 
     .event-details {
@@ -1231,93 +1114,73 @@ textarea {
     }
 
         .event-details h2 {
-            font-size: 22px;
+            font-size: var(--h2-size);
         }
 }
 
 /*---------------------about----------------*/
-/*=================================================================
-    HERO SECTION OF ABOUT US HAVE IN LINE CSS OF MIN-HEIGHT:800PX
-===================================================================*/
-
-
-.about-container {
-    background-color: #fef1f1;
-    padding-left: 20px;
-    padding-right: 20px;
-    position:absolute;
-    inset: 0;
-    margin: 0;
-    padding-bottom: 50px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    justify-content: flex-start;
-    align-items: center;
-    width: 80vw;
-    height: 100%;
-    box-sizing: border-box;
+#about-page {
+    background: var(--bg-pink) !important;
+}
+.about-content-wrapper {
+    background: white;
+    width: 90%;
+    max-width: 1100px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+    border: 1px solid white;
 }
 
-.about-top-text p {
-    font-size: 18px;
-    line-height: 1.7;
-    margin-bottom: 18px;
-    color: #333;
-    text-align: justify;
-}
 
-/* VIDEO + TEXT ROW */
-.about-video-text-row {
-    display: flex;
-    gap: 35px;
-    margin: 40px 0;
-}
-
-/* VIDEO SECTION */
-.about-video video {
-    width: 100%;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    height: 280px; /* Adjust height here */
-    object-fit: cover; /* Makes video look clean without stretching */
-    border-radius: 10px;
-}
-
-.about-video {
-    flex: 1.3;
-}
-
-/* RIGHT SIDE TEXT (about-desc) */
-.about-desc {
-    flex: 1;
-}
-
-    .about-desc h3 {
-        margin-top: 0;
-        color: #222;
-    }
-
-    .about-desc p {
+    .about-content-wrapper p {
+        font-size: var(--p-size);
+        line-height: 1.8;
         color: #444;
         margin-bottom: 20px;
-        line-height: 1.6;
+        text-align: justify;
     }
 
-/* BOTTOM PARAGRAPH */
-.about-bottom-text p {
-    font-size: 18px;
-    line-height: 1.7;
-    text-align: justify;
+/* --- THE FLOATING VIDEO --- */
+.about-video-float {
+    float: left;
+    width: 45%;
+    height: 300px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    background: #000;
 }
 
-/* Responsive mobile layout */
-@media (max-width: 768px) {
-    .about-video-text-row {
-        flex-direction: column;
+    .about-video-float iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
     }
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media screen and (max-width: 900px) {
+    .about-video-float {
+        float: none;
+        width: 100%;
+        height: 250px;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .about-content-wrapper {
+        padding: 25px;
+    }
+
+        .about-content-wrapper p {
+            text-align: left;
+        }
 }
+
 
 /*----------------------contact us----------------------*/
 .location-container {
@@ -1332,8 +1195,8 @@ textarea {
 }
 
     .address-box h2 {
-        color: #d60000;
-        font-size: 24px;
+        color: var(--primary-red);
+        font-size: var(--h2-size);
         margin: 0 0 15px 0;
         line-height: 1.3;
     }
@@ -1341,7 +1204,7 @@ textarea {
     .address-box p {
         color: #555;
         line-height: 1.6;
-        font-size: 16px;
+        font-size: var(--p-size);
         margin-bottom: 15px;
     }
 
@@ -1398,7 +1261,7 @@ textarea {
     align-items: center;
     margin-bottom: 20px;
     font-size: 32px;
-    color: #d60000;
+    color: var(--primary-red);
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     border: 1px solid #eee;
 }
@@ -1406,7 +1269,7 @@ textarea {
 .contact-card h3 {
     color: #333;
     margin: 0 0 5px 0;
-    font-size: 20px;
+    font-size: var(--h3-size);
     font-weight: 700;
 }
 
@@ -1430,14 +1293,284 @@ textarea {
     .contact-details p {
         color: #555;
         margin: 8px 0;
-        font-size: 14px;
+        font-size: var(--p-size);
         display: flex;
         align-items: center;
     }
 
     .contact-details i {
-        color: #d60000;
+        color: var(--primary-red);
         margin-right: 12px;
         width: 15px;
         text-align: center;
     }
+
+/* ============================================================
+   NEW PAGES (Bulletin Board & Podcast/Coming Soon)
+   Added at the end to satisfy "don't rearrange old stuff"
+   ============================================================ */
+
+/* --- BULLETIN BOARD PAGE --- */
+.bulletin-page-container {
+    background-color: var(--bg-pink);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding-bottom: 50px;
+    padding-left:20px;
+    justify-self: center;
+    align-self: center;
+   
+
+
+}
+
+.notices-wrapper {
+    width: 90%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.notice-card {
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid white;
+    transition: transform 0.2s;
+}
+
+    .notice-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        border-color: #ffdede;
+    }
+
+.notice-date {
+    background: var(--primary-gradient);
+    color: white;
+    width: 85px;
+    min-width: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+    .notice-date .day {
+        font-size: 28px;
+        font-weight: 800;
+        line-height: 1;
+    }
+
+    .notice-date .month {
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-top: 5px;
+    }
+
+.notice-content {
+    padding: 20px 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+    .notice-content h3 {
+        margin: 0 0 8px 0;
+        color: #333;
+        font-size: var(--h3-size);
+        font-weight: 700;
+        font-family: var(--main-font);
+    }
+
+    .notice-content p {
+        margin: 0 0 12px 0;
+        color: #666;
+        font-size: var(--p-size);
+        line-height: 1.6;
+        font-family: var(--main-font);
+    }
+
+.notice-tag {
+    display: inline-block;
+    background-color: #fff0f0;
+    color: var(--primary-red);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    border: 1px solid #ffdede;
+}
+
+.download-link {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+@media (max-width: 600px) {
+    .notice-card {
+        flex-direction: column;
+    }
+
+    .notice-date {
+        width: 100%;
+        min-width: 100%;
+        flex-direction: row;
+        gap: 10px;
+        padding: 8px;
+        height: auto;
+    }
+
+        .notice-date .day {
+            font-size: 20px;
+        }
+
+        .notice-date .month {
+            margin-top: 0;
+            font-size: 16px;
+        }
+}
+
+/* --- BULLETIN DETAILS PAGE --- */
+.details-card-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.notice-details-card {
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    border: 1px solid white;
+}
+
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.details-date {
+    color: #888;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.details-title {
+    color: #333;
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+    font-family: var(--main-font);
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin-bottom: 30px;
+}
+
+.details-body p {
+    font-size: var(--p-size);
+    line-height: 1.8;
+    color: #555;
+    white-space: pre-wrap;
+    font-family: var(--main-font);
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.external-link-box {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-red);
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    color: #666;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+    .back-btn:hover {
+        color: var(--primary-red);
+    }
+
+/* --- COMING SOON / PODCAST (Fixed Visibility) --- */
+.simple-coming-soon-container {
+    background-color: var(--bg-pink);
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.main-title {
+    font-size: 80px;
+    font-weight: 900;
+    margin: 0;
+    color: var(--primary-red); /* FIXED: Solid color for visibility */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: var(--main-font);
+    text-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.sub-text {
+    font-size: 20px;
+    color: #555;
+    margin-top: 20px;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: var(--main-font);
+}
+
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 45px;
+        letter-spacing: 2px;
+    }
+
+    .sub-text {
+        font-size: 16px;
+    }
+}

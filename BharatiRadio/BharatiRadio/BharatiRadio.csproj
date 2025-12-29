@@ -135,6 +135,7 @@
     <Compile Include="Models\Program.cs" />
     <Compile Include="Models\RadioContext.cs" />
     <Compile Include="Models\Shows.cs" />
+    <Compile Include="Models\videos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +156,8 @@
     <Content Include="Views\Home\Videos.cshtml" />
     <Content Include="Views\Home\Bulletin.cshtml" />
     <Content Include="Views\Home\Shows.cshtml" />
+    <Content Include="Views\Home\Podcast.cshtml" />
+    <Content Include="Views\Home\Article.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

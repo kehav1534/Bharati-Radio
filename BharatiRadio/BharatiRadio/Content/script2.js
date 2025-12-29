@@ -84,3 +84,7 @@ window.onresize = function () {
         document.querySelector(".sidebar").style.display = "none";
     }
 };
+
+
+
+

@@ -16,7 +16,7 @@ body {
 /* --- Sidebar Navigation --- */
 .sidebar {
     width: 260px;
-    background-color: #1e293b; /* Dark blue/slate */
+    background-color: #1e293b; 
     color: #e2e8f0;
     display: flex;
     flex-direction: column;
@@ -37,13 +37,13 @@ body {
 
     .sidebar-header .logo-icon {
         font-size: 2rem;
-        color: #e2e8f0; /* Logo placeholder color */
+        color: #e2e8f0; 
     }
 
     .sidebar-header h2 {
         font-weight: 600;
         font-size: 1.25rem;
-        /* In a real app, you'd replace this text with your logo */
+        
     }
 
 .sidebar-nav {
@@ -71,7 +71,7 @@ body {
         }
 
         .sidebar-nav a.active {
-            background-color: #d90429; /* Using brand red from image */
+            background-color: #d90429;
             color: #ffffff;
             font-weight: 600;
         }
@@ -106,7 +106,7 @@ body {
 /* --- Main Content Area --- */
 .main-content {
     flex-grow: 1;
-    margin-left: 260px; /* Same as sidebar width */
+    margin-left: 260px; 
     overflow-y: auto;
     height: 100vh;
     transition: margin-left 0.3s ease;
@@ -136,7 +136,7 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
     color: #475569;
-    display: none; /* Hidden on desktop */
+    display: none; 
 }
 
 .header h1 {
@@ -169,11 +169,11 @@ body {
 }
 
 .content-section {
-    display: none; /* Hidden by default */
+    display: none; 
 }
 
     .content-section.active {
-        display: block; /* Shown when active */
+        display: block; 
     }
 
 /* Dashboard Cards */
@@ -266,7 +266,7 @@ body {
     }
 
 .btn-primary {
-    background-color: #d90429; /* Brand Red */
+    background-color: #d90429; 
     color: #ffffff;
 }
 
@@ -395,7 +395,7 @@ td {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
-    display: none; /* Hidden by default */
+    display: none; 
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -529,11 +529,11 @@ td {
     }
 
     .sidebar-nav {
-        display: none; /* Hide nav links, would need JS to toggle */
+        display: none; 
     }
 
     .sidebar-footer {
-        display: none; /* Hide footer on mobile */
+        display: none; 
     }
 
     .main-content {
@@ -541,7 +541,7 @@ td {
     }
 
     #menu-toggle {
-        display: block; /* Show hamburger menu */
+        display: block; 
     }
 
     .header {
@@ -553,7 +553,7 @@ td {
         }
 
     .user-profile span {
-        display: none; /* Hide username */
+        display: none;
     }
 
     .content {
@@ -579,7 +579,7 @@ td {
     }
 
     .table-wrapper {
-        /* On mobile, tables are tricky. This forces horizontal scroll. */
+        
         overflow-x: auto;
     }
 
