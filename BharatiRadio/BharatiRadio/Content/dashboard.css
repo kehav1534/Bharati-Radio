@@ -105,7 +105,7 @@ body {
 /* --- Main Content Area --- */
 .main-content {
     flex-grow: 1;
-    margin-left: 260px;
+    margin-left: 180px;
     overflow-y: auto;
     height: 100vh;
     transition: margin-left 0.3s ease;
