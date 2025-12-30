@@ -19,8 +19,8 @@ namespace BharatiRadio.Controllers
         {
             var viewModel = new AdminViewModel
             {
-                Feedbacks = db.Feedbacks.ToList(),
-                Bulletins = db.Bulletins.ToList()
+                Feedbacks = db.Feedbacks.OrderByDescending(f => f.Id).ToList(),
+                Bulletins = db.Bulletins.OrderByDescending(f => f.Id).ToList()
             };
             return View(viewModel);
         }

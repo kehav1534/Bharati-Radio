@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Bulletin Board";
-    Layout = "~/Views/Shared/__Layout.cshtml";
+    Layout = "~/Views/Shared/Layout.cshtml";
 }
 
 
@@ -37,9 +37,9 @@
 
                             @if (!string.IsNullOrEmpty(item.link))
                             {
-                                <a href="@Url.Action("Article", "Home", new { id = item.Id })" class="download-link">
+                                @*<a href="@Url.Action("Article", "Home", new { id = item.Id })" class="download-link">
                                     View Details <i class="fas fa-arrow-right"></i>
-                                </a>
+                                </a>*@
                             }
                         </div>
                     </div>
