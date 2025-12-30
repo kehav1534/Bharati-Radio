@@ -20,12 +20,6 @@
 
 </head>
 <body>
-    @if (TempData["msg"] != null)
-    {
-        <script>
-        alert('@TempData["msg"]');
-        </script>
-    }
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
@@ -168,6 +162,8 @@
                                     <select id="suggestion-filter" name="status" style="padding:5px;" required>
                                         <option value="All">All</option>
                                         <option value="Saved">Saved</option>
+                                        <option value="Viewed">Viewed</option>
+                                        <option value="Unread">Unread</option>
                                     </select>
                                 </th>
                             </tr>
@@ -190,6 +186,9 @@
                                     </td>
                                     <td style="display:none;">
                                         @item.marked
+                                    </td>
+                                    <td style="display:none;">
+                                        @item.viewed
                                     </td>
                                     <td>
                                         <button class="btn btn-action btn-view-suggestion" title="View" data-id="@item.Id">

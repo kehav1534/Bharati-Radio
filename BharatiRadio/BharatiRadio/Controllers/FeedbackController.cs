@@ -28,13 +28,13 @@ namespace BharatiRadio.Controllers
                 if (a > 0)
                 {
                     //ViewBag.msg = "<script>alert('Thank you for your feedback!');</script>";
-                    TempData["msg"] = "<script>alert('Thank you for your feedback!');</script>";
-                    return RedirectToAction("Home", "Home");
+                    TempData["msg"] = "Thank you for your feedback!";
+                    return RedirectToAction("feedback");
                     //ModelState.Clear();
                 }
                 else
                 {
-                    ViewBag.msg = "<script>alert('Error in submitting feedback. Please try again.');</script>";
+                    ViewBag.msg = "('Error in submitting feedback. Please try again.')";
                 }
             }
             return View();

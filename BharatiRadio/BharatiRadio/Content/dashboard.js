@@ -251,12 +251,22 @@ suggestionFilter.addEventListener("change", function () {
     const selectedValue = this.value.toLowerCase();
     rows.forEach(row => {
         const cellText = row.cells[COLUMN_INDEX].textContent;
+        const newcellText = row.cells[5].textContent;
+        
         if (selectedValue == "all") {
             row.style.display = "";
         }
-        else if (selectedValue == "saved") {
+        else if (selectedValue === "saved") {
             row.style.display = (cellText == 1) ? "" : "none";
+            console.log(newcellText);
         }
+        else if (selectedValue === "unread") {
+            row.style.display = (newcellText == 0) ? "" : "none";
+        }
+        else {
+            row.style.display = (newcellText == 1) ? "" : "none";
+        }
+        
     });
 });
 
