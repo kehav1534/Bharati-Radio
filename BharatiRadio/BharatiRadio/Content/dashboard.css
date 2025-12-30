@@ -16,7 +16,7 @@ body {
 /* --- Sidebar Navigation --- */
 .sidebar {
     width: 260px;
-    background-color: #1e293b; 
+    background-color: #1e293b;
     color: #e2e8f0;
     display: flex;
     flex-direction: column;
@@ -37,13 +37,12 @@ body {
 
     .sidebar-header .logo-icon {
         font-size: 2rem;
-        color: #e2e8f0; 
+        color: #e2e8f0;
     }
 
     .sidebar-header h2 {
         font-weight: 600;
         font-size: 1.25rem;
-        
     }
 
 .sidebar-nav {
@@ -106,7 +105,7 @@ body {
 /* --- Main Content Area --- */
 .main-content {
     flex-grow: 1;
-    margin-left: 260px; 
+    margin-left: 180px;
     overflow-y: auto;
     height: 100vh;
     transition: margin-left 0.3s ease;
@@ -136,7 +135,7 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
     color: #475569;
-    display: none; 
+    display: none;
 }
 
 .header h1 {
@@ -169,11 +168,11 @@ body {
 }
 
 .content-section {
-    display: none; 
+    display: none;
 }
 
     .content-section.active {
-        display: block; 
+        display: block;
     }
 
 /* Dashboard Cards */
@@ -266,7 +265,7 @@ body {
     }
 
 .btn-primary {
-    background-color: #d90429; 
+    background-color: #d90429;
     color: #ffffff;
 }
 
@@ -395,7 +394,7 @@ td {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
-    display: none; 
+    display: none;
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -529,11 +528,11 @@ td {
     }
 
     .sidebar-nav {
-        display: none; 
+        display: none;
     }
 
     .sidebar-footer {
-        display: none; 
+        display: none;
     }
 
     .main-content {
@@ -541,7 +540,7 @@ td {
     }
 
     #menu-toggle {
-        display: block; 
+        display: block;
     }
 
     .header {
@@ -579,7 +578,6 @@ td {
     }
 
     .table-wrapper {
-        
         overflow-x: auto;
     }
 
