@@ -105,15 +105,16 @@
   <ItemGroup>
     <Content Include="Content\dashboard.js" />
     <Content Include="Content\Images\background.jpg" />
-    <Content Include="Content\Images\bharti_radio_logo.jpg" />
+    <Content Include="Content\Images\bharti_radio_logo.png" />
     <Content Include="Content\Images\bvicam.jpg" />
+    <Content Include="Content\Images\Four Current Events that Could Challenge the Prepper Lifestyle _ Ready Nutrition.png" />
     <Content Include="Content\Images\logo-bvicam.png" />
-    <Content Include="Content\Images\RB_LOGIN_IMAGE.jpg" />
     <Content Include="Content\dashboard.css" />
-    <Content Include="Content\Images\radio1.jpeg" />
+    <Content Include="Content\Images\radio1.png" />
+    <Content Include="Content\Images\Woman journalist interviewing with the politician man illustration _ Premium Vector.png" />
+    <Content Include="Content\Images\— lois lane.png" />
     <Content Include="Content\script2.js" />
     <Content Include="Content\styles.css" />
-    <Content Include="Content\styles2.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -159,7 +160,6 @@
     <Content Include="Views\Home\Shows.cshtml" />
     <Content Include="Views\Home\Podcast.cshtml" />
     <Content Include="Views\Home\Article.cshtml" />
-    <Content Include="Views\Shared\__Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

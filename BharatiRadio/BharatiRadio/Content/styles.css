@@ -194,7 +194,7 @@ body {
 }
 
 /* --- RESPONSIVE MEDIA QUERIES --- */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
     /* Header adjustments */
     .header-top {
         flex-wrap: wrap;

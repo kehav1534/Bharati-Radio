@@ -1,83 +1,108 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="~/Content/script2.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="~/Content/styles2.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - Bharati Radio</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <script src="~/Content/script2.js" defer></script>
+    <link href="~/Content/styles.css" rel="stylesheet" />
 
 </head>
 <body>
-    <div class="sidebar">
-        <button id="m-btn" onclick="closeMenu()">&times; Close</button>
-        <a href="home.html" id="sidebar-element">HOME</a>
-        <a href="/about-us" id="sidebar-element">ABOUT US</a>
-        <a href="/bulletin" id="sidebar-element">BULLETIN</a>
-        <a href="/shows" id="sidebar-element">SHOWS</a>
-        <a href="/videos" id="sidebar-element">VIDEOS</a>
-        <a href="/Home/Podcast" id="sidebar-element">PODCAST</a>
-        <a href="/programs" id="sidebar-element">SPECIAL PROGRAMS</a>
-        <a href="/contact-us" id="sidebar-element">CONTACT US</a>
-        <a href="/feedback" id="sidebar-element">SUGGESTION</a>
-        <a href="/Auth/login" id="sidebar-element">LOGIN</a>
+
+    <header class="site-header">
+        <div class="header-top">
+            <div class="logo-left">
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="~/Content/Images/bharti_radio_logo.png" alt="Bharati Radio Logo">
+                </a>
+            </div>
+
+            <div class="site-title">
+                <h1>Bharati Radio</h1>
+            </div>
+
+            <div class="logo-right">
+                <img src="~/Content/Images/logo-bvicam.png" alt="BVICAM Logo">
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="navbar-container">
+                <ul class="nav-menu">
+                    <li><a href="@Url.Action("Home", "Home")" class="nav-link">HOME</a></li>
+                    <li><a href="@Url.Action("AboutUs", "Home")" class="nav-link">ABOUT US</a></li>
+                    <li><a href="@Url.Action("Bulletin", "Home")" class="nav-link">BULLETIN</a></li>
+                    <li><a href="@Url.Action("Shows", "Home")" class="nav-link">SHOWS</a></li>
+                    <li><a href="@Url.Action("Videos", "Home")" class="nav-link">VIDEOS</a></li>
+                    <li><a href="@Url.Action("Podcast", "Home")" class="nav-link">PODCAST</a></li>
+                    <li><a href="@Url.Action("Programs", "Home")" class="nav-link">SPECIAL PROGRAMS</a></li>
+                    <li><a href="@Url.Action("ContactUs", "Home")" class="nav-link">CONTACT US</a></li>
+                    <li><a href="@Url.Action("feedback", "Feedback")" class="nav-link">SUGGESTION</a></li>
+                    <li><a href="@Url.Action("Login", "Auth")" class="nav-link">LOGIN</a></li>
+                </ul>
+
+                <div class="hamburger" id="hamburger-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" id="close-btn">&times;</div>
+        <ul class="sidebar-menu">
+            <li><a href="@Url.Action("Home", "Home")" class="sidebar-link">HOME</a></li>
+            <li><a href="@Url.Action("AboutUs", "Home")" class="sidebar-link">ABOUT US</a></li>
+            <li><a href="@Url.Action("Bulletin", "Home")" class="sidebar-link">BULLETIN</a></li>
+            <li><a href="@Url.Action("Shows", "Home")" class="sidebar-link">SHOWS</a></li>
+            <li><a href="@Url.Action("Videos", "Home")" class="sidebar-link">VIDEOS</a></li>
+            <li><a href="@Url.Action("Podcast", "Home")" class="sidebar-link">PODCAST</a></li>
+            <li><a href="@Url.Action("Programs", "Home")" class="sidebar-link">SPECIAL PROGRAMS</a></li>
+            <li><a href="@Url.Action("ContactUs", "Home")" class="sidebar-link">CONTACT US</a></li>
+            <li><a href="@Url.Action("feedback", "Feedback")" class="sidebar-link">SUGGESTION</a></li>
+            <li><a href="@Url.Action("Login", "Auth")" class="sidebar-link">LOGIN</a></li>
+        </ul>
     </div>
 
-    <div class="main-container">
+    <main class="bulletin-page-container">
+        @RenderBody()
+    </main>
 
-
-        <div class="area-head" style="display:grid; height:185px;">
-            <div class="area-head-row" style="display: flex; justify-content: space-between; align-items: center;width:100%">
-                <div class="area-head-col">
-                    <a href="/Home">
-                        <img src="~/Content/Images/bharti_radio_logo.jpg" alt="Radio Bharati Logo" id="brand-img">
-                    </a>
-                </div>
-                <div class="area-head-col">
-                    <h1 style="font-size:40px; color:red;"><b>Bharati Radio</b></h1>
-                </div>
-                <div class="area-head-col">
-                    <a href="/Home">
-                        <img src="~/Content/Images/logo-bvicam.png" alt="Radio Bharati Logo" id="brand-img" style="width:200px;">
-                    </a>
-                </div>
-                <div class="menu-btn">
-                    <button id="m-btn" onclick="openMenu()">
-                        <img width="64" height="64" src="https://img.icons8.com/sf-black/64/FA5252/menu.png" alt="menu" />
-                    </button>
-                </div>
-            </div>
-            <div class="area-head-row" style="display: flex; justify-content: space-between; align-items: center;width:100%">
-                <div class="area-head-col">
-                    <div class="area-head-options">
-                        <a href="/" class="option">HOME</a>
-                        <a href="/about-us" class="option">ABOUT US</a>
-                        <a href="/bulletin" class="option">BULLETIN</a>
-                        <a href="/Home/shows" class="option">SHOWS</a>
-                        <a href="/Home/videos" class="option">VIDEOS</a>
-                        <a href="/Home/podcast" class="option">PODCAST</a>
-                        <a href="/programs" class="option">SPECIAL PROGRAMS</a>
-                        <a href="/contact-us" class="option">CONTACT US</a>
-                        <a href="/feedback" class="option">SUGGESTION</a>
-                        <a href="/Auth/Login" class="option">LOGIN</a>
-                    </div>
-                </div>
-            </div>
-            </div>
-
-
-            @RenderBody()
-
-
-            <div class="area-footer">
-                <div class="footer-block">
-                    <h2>A-4, Paschim Vihar, Opp. Paschim Vihar (East) Metro Station, Rohtak Road, New Delhi, Delhi 110063</h2>
-                </div>
-            </div>
-
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>A-4, Paschim Vihar, Opp. Paschim Vihar (East) Metro Station, Rohtak Road, New Delhi, Delhi 110063</p>
         </div>
-</body>
+    </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const sidebar = document.getElementById('sidebar');
+
+            // Function to open sidebar
+            hamburgerBtn.addEventListener('click', function () {
+                sidebar.classList.add('active');
+            });
+
+            // Function to close sidebar
+            closeBtn.addEventListener('click', function () {
+                sidebar.classList.remove('active');
+            });
+
+            // Optional: Close sidebar when clicking outside of it
+            document.addEventListener('click', function (event) {
+                if (!sidebar.contains(event.target) && !hamburgerBtn.contains(event.target) && sidebar.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
 </html>
