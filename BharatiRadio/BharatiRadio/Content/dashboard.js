@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('sugg-email').textContent = res.email || '';
                     document.getElementById('sugg-contact').textContent = res.contact_no || '';
                     document.getElementById('sugg-loction').textContent = res.location || '';
-                    document.getElementById('sugg-msg').textContent = res.msg || '';
+                    document.getElementById('sugg-msg').value = res.msg || '';
                     document.getElementById('delete-item-val').value = res.id || '';
                     document.querySelector('.mark-btn').dataset.markId = res.id || '';
                     if (res.mark == "1") {
