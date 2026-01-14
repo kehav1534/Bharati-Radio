@@ -117,7 +117,7 @@
                         <tbody>
                             @if (Model.Bulletins != null)
                             {
-                            @foreach (var item in Model.Bulletins)
+                            foreach (var item in Model.Bulletins)
                             {
                                 <tr>
                                     <td>
@@ -174,7 +174,7 @@
                         <tbody>
                             @if (Model.Feedbacks != null)
                             {
-                                @foreach (var item in Model.Feedbacks)
+                                foreach (var item in Model.Feedbacks)
                                 {
                                     <tr style="font-weight:@(item.viewed == 0 ? "bold" : "normal"); background-color:@(item.viewed == 0 ? "white" : "#E8E9EB")">
                                         <td>
