@@ -296,3 +296,25 @@ searchBulletin.addEventListener('input', function () {
 
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerBtn = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    // Open sidebar
+    hamburgerBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        sidebar.classList.add('active');
+    });
+
+    // Close sidebar when clicking outside
+    document.addEventListener('click', function (event) {
+        if (
+            sidebar.classList.contains('active') &&
+            !sidebar.contains(event.target) &&
+            !hamburgerBtn.contains(event.target)
+        ) {
+            sidebar.classList.remove('active');
+        }
+    });
+});

@@ -412,10 +412,12 @@ td {
     padding: 2rem;
     border-radius: 16px;
     width: 90%;
+    max-height: 700px;
     max-width: 600px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transform: scale(0.95);
     transition: transform 0.3s ease;
+    overflow: scroll;
 }
 
 .modal-overlay.active .modal-box, .suggestion-overlay.active {
@@ -514,25 +516,31 @@ td {
     }
 
     .sidebar {
-        width: 100%;
-        height: auto;
-        position: static;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 260px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
     }
+
+        .sidebar.active {
+            transform: translateX(0);
+        }
 
     .sidebar-header {
         padding: 1rem;
         border-bottom: none;
     }
 
-    .sidebar-nav {
-        display: none;
+    .main-content {
+        margin-left: 0;
     }
 
-    .sidebar-footer {
-        display: none;
+    #menu-toggle {
+        display: block;
     }
 
     .main-content {
