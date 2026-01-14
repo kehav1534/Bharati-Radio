@@ -15,6 +15,26 @@ body {
     justify-self: center;
     max-width: 1400px;
 }
+.popup {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 9999;
+}
+
+    .popup.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 
 :root {
     /* --- FONTS --- */

@@ -84,8 +84,15 @@ window.onresize = function () {
     }
 };
 
+function showPopup(message, duration = 3000) {
+    const popup = document.getElementById('popup');
+    popup.textContent = message;
 
+    popup.classList.add('show');
 
-
+    setTimeout(() => {
+        popup.classList.remove('show');
+    }, duration);
+}
 
 

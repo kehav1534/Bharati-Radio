@@ -5,9 +5,18 @@
 @if (TempData["msg"] != null)
 {
     <script>
-        alert('@TempData["msg"]');
+        document.addEventListener("DOMContentLoaded", function () {
+            const popup = document.getElementById("popup");
+            popup.innerText = "@TempData["msg"]";
+            popup.classList.add("show");
+
+            setTimeout(() => {
+                popup.classList.remove("show");
+            }, 5000);
+        });
     </script>
 }
+
 <div class="page-header">
     <h1>Feedback</h1>
 </div>
@@ -45,5 +54,4 @@
 
 </form>
 
-
-
+<div id="popup" class="popup"></div>

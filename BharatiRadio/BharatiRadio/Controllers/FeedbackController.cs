@@ -28,7 +28,7 @@ namespace BharatiRadio.Controllers
                 if (a > 0)
                 {
                     //ViewBag.msg = "<script>alert('Thank you for your feedback!');</script>";
-                    TempData["msg"] = "Thank you for your feedback!";
+                    TempData["msg"] = "<span style=\"color:green; font-size:20px;\">✔</span>Suggestion sent successfully!!";
                     return RedirectToAction("feedback");
                     //ModelState.Clear();
                 }
